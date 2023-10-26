@@ -1,0 +1,89 @@
+<mxfile host="Electron" modified="2023-10-05T11:22:04.858Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.0 Chrome/114.0.5735.289 Electron/25.8.3 Safari/537.36" etag="UyLL7kunYH-yF6dt6v18" version="22.0.0" type="device">
+  <diagram name="Page-1" id="Ol44xswGQnkZc5XjW19l">
+    <mxGraphModel dx="1300" dy="855" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sMBOPRvQxOReoimC6kEQ-1" target="sMBOPRvQxOReoimC6kEQ-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sMBOPRvQxOReoimC6kEQ-1" target="sMBOPRvQxOReoimC6kEQ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-1" value="Target&lt;br&gt;directory does &lt;br&gt;not exist" style="rhombus;whiteSpace=wrap;html=1;spacing=12;spacingTop=12;spacingLeft=16;spacingBottom=12;spacingRight=16;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-2" value="Status =&amp;nbsp;FILE_STATUS_ERROR_FILE_REMOVED" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="480" y="140" width="312" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="sMBOPRvQxOReoimC6kEQ-4" target="sMBOPRvQxOReoimC6kEQ-21">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="280" />
+              <mxPoint x="240" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sMBOPRvQxOReoimC6kEQ-4" target="sMBOPRvQxOReoimC6kEQ-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-4" value="Target&lt;br&gt;file does &lt;br&gt;not exist" style="rhombus;whiteSpace=wrap;html=1;spacing=12;spacingTop=12;spacingLeft=16;spacingBottom=12;spacingRight=16;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-5" value="Status =&amp;nbsp;FILE_STATUS_NOT_COPIED" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="480" y="258" width="312" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="sMBOPRvQxOReoimC6kEQ-7" target="sMBOPRvQxOReoimC6kEQ-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="505" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="sMBOPRvQxOReoimC6kEQ-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="550" as="sourcePoint" />
+            <mxPoint x="430" y="618" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="130" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-7" value="Target&lt;br&gt;file has different&lt;br&gt;size" style="rhombus;whiteSpace=wrap;html=1;spacing=12;spacingTop=12;spacingLeft=16;spacingBottom=12;spacingRight=16;" vertex="1" parent="1">
+          <mxGeometry x="40" y="480" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-8" value="Status =&amp;nbsp;FILE_STATUS_ERROR_SIZE_DIFFERENCE" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="480" y="500" width="312" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="sMBOPRvQxOReoimC6kEQ-11" target="sMBOPRvQxOReoimC6kEQ-12" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sMBOPRvQxOReoimC6kEQ-11" target="sMBOPRvQxOReoimC6kEQ-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-11" value="Original&lt;br&gt;file no longer&lt;br&gt;exists" style="rhombus;whiteSpace=wrap;html=1;spacing=12;spacingTop=12;spacingLeft=16;spacingBottom=12;spacingRight=16;" vertex="1" parent="1">
+          <mxGeometry x="40" y="360" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-12" value="Status =&amp;nbsp;FILE_STATUS_MOVED" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="480" y="380" width="312" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-16" value="Status =&amp;nbsp;FILE_STATUS_COPIED" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="480" y="620" width="312" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sMBOPRvQxOReoimC6kEQ-18" target="sMBOPRvQxOReoimC6kEQ-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-18" value="start" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="110" y="40" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sMBOPRvQxOReoimC6kEQ-21" target="sMBOPRvQxOReoimC6kEQ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="sMBOPRvQxOReoimC6kEQ-21" target="sMBOPRvQxOReoimC6kEQ-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMBOPRvQxOReoimC6kEQ-21" value="Original&lt;br&gt;file no longer&lt;br&gt;exists" style="rhombus;whiteSpace=wrap;html=1;spacing=12;spacingTop=12;spacingLeft=16;spacingBottom=12;spacingRight=16;" vertex="1" parent="1">
+          <mxGeometry x="270" y="120" width="180" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

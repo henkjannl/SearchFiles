@@ -1,0 +1,84 @@
+{
+    "Version": 1,
+    "RootDir": "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\05 Taal",
+    "RecentDirectories": [
+        "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\05 Taal",
+        ".",
+        "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python",
+        "C:\\Users\\henkj\\Downloads",
+        "C:\\Users\\henkj\\Downloads\\Subdirectory"
+    ],
+    "FilterExtension": "",
+    "RecentExtensions": [
+        "p",
+        "",
+        "docx",
+        "xlsx",
+        "pptx",
+        "pdf",
+        "odt",
+        "odt",
+        "csv",
+        "py",
+        "svg",
+        "png",
+        "jpg",
+        "jpeg",
+        "gif",
+        "txt",
+        "zip"
+    ],
+    "FilterFilename": "",
+    "RecentFilenames": [
+        "yt",
+        "y",
+        "a",
+        "o",
+        "del",
+        "de",
+        "d",
+        ""
+    ],
+    "ReportColumns": [
+        [
+            "Path",
+            true
+        ],
+        [
+            "Filename",
+            true
+        ],
+        [
+            "File size",
+            false
+        ],
+        [
+            "Path and filename",
+            true
+        ],
+        [
+            "Create date",
+            false
+        ],
+        [
+            "Modified date",
+            false
+        ],
+        [
+            "Accessed date",
+            false
+        ],
+        [
+            "Image taken date",
+            false
+        ],
+        [
+            "Image width",
+            false
+        ],
+        [
+            "Image height",
+            false
+        ]
+    ]
+}
