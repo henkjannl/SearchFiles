@@ -5,32 +5,32 @@
 - copies data to clipboard
 
 To do:
-- allow unique settings file for each client
+- repeat linting
 - search tree:
     - improve sorting directories and files
     - collapse / expand all with right mouse button
 - segment window __init__ code in smaller functions
 - parallel thread to search files, with dialog that can cancel the search
+- confirmation message that the files are copied to the clipboard
 - first find out if this is a good idea:
     - class Selected_File() can inherit from both QtCore.QObject and Path(), instead of creating a self.entry field
     - property decorators for file properties
 - add sort field
+- reconsider if we want to store the extension field
 """
 
 import argparse
 import sys
 import logging
 from pathlib import Path
-import json
 import argparse
 
 from PyQt5 import QtGui, QtCore, QtWidgets
 
-from modules.sf_constants import *
 from modules.sf_settings import Settings
-from modules.sf_report_columns import *
-from modules.sf_utilities import *
-from modules.sf_file_selection import *
+from modules.sf_report_columns import SelectReportFields
+from modules.sf_utilities import app_icon
+from modules.sf_file_selection import File_Selection
 
 logging.basicConfig(stream=open(r'.\log.txt', 'w', encoding='utf-8'),
                     level=logging.DEBUG,
@@ -42,14 +42,6 @@ class File_Item(QtGui.QStandardItem):
     def __init__(self, selected_file):
         """The item in the first column, giving the name of the file"""
         super().__init__(app_icon("icon_file.svg"), selected_file.entry.name)
-
-class Comment_Item(QtGui.QStandardItem):
-
-    def __init__(self, selected_file):
-        """The item in the second column, representing the status of copying"""
-        # Call initializer of QtGui.QStandardItem
-        comment = ""
-        super().__init__(app_icon("icon_image.svg"), comment)
 
 class DragButton(QtWidgets.QPushButton):
 
@@ -348,175 +340,8 @@ class Window(QtWidgets.QMainWindow):
             logging.info(self.settings.report_columns)
             self.file_selection.copy_report_to_clipboard(self.settings.report_columns)
             self.settings.save()
-    
-        
 
-
-##############################
-# OLD CODE BELOW
-##############################
-
-    def scan_for_camera(self):
-        """Scan if the user has connected a camera
-        This method is triggered by a timer"""
-        camera_connected = False
-        for potential_camera_location in self.settings[SETTING_LIST_OF_CAMERA_LOCATIONS]:
-            if Path(potential_camera_location).is_dir():
-                camera_connected = True
-                if self.state == STATE_SCANNING:
-                    logging.info(f'Found camera at {potential_camera_location}')
-                    self.locate_camera_action.setChecked(False)
-                    self.set_origin(potential_camera_location)
-                    self.list_origin = LIST_ORIGIN_CAMERA
-                    self.search_files()
-                    self.state = STATE_AUTO_LIST_RETRIEVED
-                break
-
-        self.set_camera_connected_icon(camera_connected, self.list_origin==LIST_ORIGIN_CAMERA)
-
-    def locate_camera(self):
-        """User requests to open a directory which contains photos"""
-        logging.info('locate_camera called')
-        camera_dir = QtWidgets.QFileDialog.getExistingDirectory(self, 'Select camera', self.most_likely_camera_location() )
-
-        if Path(camera_dir).is_dir():
-            camera_dir = str(Path(camera_dir))
-            self.toggle_scanning_action.setChecked(False)
-            self.settings[SETTING_LAST_MANUAL_CAMERA_LOCATION] = camera_dir
-            self.set_origin(camera_dir)
-            self.save_settings()
-            self.list_origin = LIST_ORIGIN_MANUAL
-            self.search_files()
-            self.state = STATE_MANUAL_LIST_RETRIEVED
-
-    def photo_status_changed(self, identifier, new_status):
-        """The mover thread has modified the status of a file"""
-        logging.info(f'Status of {identifier:03d} changed to {FILE_STATUS_STRING[new_status]}')
-        if identifier in self.comment_items:
-            self.comment_items[identifier].update_status(new_status)
-
-    def choose_destination_directory(self):
-        """User changes destination directory"""
-        logging.info('choose_destination_directory called')
-        new_target_location = QtWidgets.QFileDialog.getExistingDirectory(self, 'Select target location', self.most_likely_target_location() )
-        self.set_target(new_target_location)
-        self.save_settings()
-        self.update_treeview()
-
-    def move_photos(self):
-        logging.info('move_photos called')
-        self.file_selection.set_target_location(self.settings[SETTING_CURRENT_TARGET_LOCATION])
-        self.file_selection.only_copy = False
-        self.move_photos_action.setEnabled(False)
-        self.copy_photos_action.setEnabled(False)
-        self.state = STATE_MOVE_COPY_PHOTOS
-        self.move_photos_thread.start()
-
-    def copy_photos(self):
-        logging.info('copy_photos called')
-        self.file_selection.set_target_location(self.settings[SETTING_CURRENT_TARGET_LOCATION])
-        self.file_selection.only_copy = True
-        self.move_photos_action.setEnabled(False)
-        self.copy_photos_action.setEnabled(False)
-        self.state = STATE_MOVE_COPY_PHOTOS
-        self.move_photos_thread.start()
-
-    def photo_mover_finished(self, message):
-        logging.info('photo_mover_finished called')
-        #self.photo_mover.stop()
-        self.move_photos_thread.quit()
-        self.move_photos_thread.wait()
-
-        # Update list and enable/disable buttons
-        self.update_treeview()
-        self.set_status(message)
-
-        self.move_photos_action.setEnabled(True)
-        self.copy_photos_action.setEnabled(True)
-
-        self.state = STATE_SCANNING
-
-    def load_settings(self):
-        logging.info('load_settings called')
-        logging.info(f'Settings file: {SETTINGS_FILE}')
-        try:
-            with open(SETTINGS_FILE, 'r') as openfile:        
-                self.settings = json.load(openfile)
-        except:
-            self.settings = {}
-            self.settings[SETTING_LIST_OF_CAMERA_LOCATIONS] = [r'D:\AVF_INFO', r'D:\DCIM', r'D:\PRIVATE', r'E:\AVF_INFO', r'E:\DCIM', r'E:\PRIVATE']
-            self.settings[SETTING_CURRENT_CAMERA_LOCATION    ] = r'C:\Users\henkj\Downloads\Source'
-            self.settings[SETTING_LIST_OF_TARGET_LOCATIONS] = [r'C:\Users\OneDrive\Fotos', r'C:\Users\hjvanderpol\OneDrive\Fotos', 
-                r'C:\Users\hj.vanderpol', r'C:\Source']
-            self.settings[SETTING_CURRENT_TARGET_LOCATION] = Path.home()
-
-    def clean_path_list(self, path_list):
-        new_list = []
-        for path in path_list:
-            modified_path = str(Path(path))
-            if modified_path not in new_list:
-                new_list.append(modified_path)
-        return new_list
-
-    def cleanup_settings(self):
-        logging.info('cleanup_settings called')
-
-        if SETTING_VERSION not in self.settings.keys():
-            self.settings[SETTING_VERSION] = 1
-
-        if SETTING_LIST_OF_CAMERA_LOCATIONS not in self.settings.keys():
-            self.settings[SETTING_LIST_OF_CAMERA_LOCATIONS] = []
-        self.settings[SETTING_LIST_OF_CAMERA_LOCATIONS] = self.clean_path_list(self.settings[SETTING_LIST_OF_CAMERA_LOCATIONS])
-
-        if SETTING_CURRENT_CAMERA_LOCATION not in self.settings.keys():
-            self.settings[SETTING_CURRENT_CAMERA_LOCATION] = str(Path.home())
-        self.settings[SETTING_CURRENT_CAMERA_LOCATION] = str(Path(self.settings[SETTING_CURRENT_CAMERA_LOCATION]))
-
-        if SETTING_LAST_MANUAL_CAMERA_LOCATION not in self.settings.keys():
-            self.settings[SETTING_LAST_MANUAL_CAMERA_LOCATION] = str(Path.home())
-
-        if SETTING_LIST_OF_TARGET_LOCATIONS not in self.settings.keys():
-            self.settings[SETTING_LIST_OF_TARGET_LOCATIONS] = []
-        self.settings[SETTING_LIST_OF_TARGET_LOCATIONS] = self.clean_path_list(self.settings[SETTING_LIST_OF_TARGET_LOCATIONS])
-
-        if SETTING_CURRENT_TARGET_LOCATION not in self.settings.keys():
-            self.settings[SETTING_CURRENT_TARGET_LOCATION] = str(Path.home())
-        self.settings[SETTING_CURRENT_TARGET_LOCATION] = str(Path(self.settings[SETTING_CURRENT_TARGET_LOCATION]))
-
-    def save_settings(self):
-        logging.info('save_settings called')
-        self.cleanup_settings()
-        json_settings_object = json.dumps(self.settings, indent=4)
-        with open(SETTINGS_FILE, "w") as outfile:
-            outfile.write(json_settings_object)
-
-    def most_likely_camera_location(self):
-
-        # If the last used camera position exists, return that
-        if Path(self.settings[SETTING_LAST_MANUAL_CAMERA_LOCATION]).is_dir():
-            return self.settings[SETTING_LAST_MANUAL_CAMERA_LOCATION]
-        
-        # If one of the previously used camera positions works, return that
-        for potential_camera_location in self.settings[SETTING_LIST_OF_CAMERA_LOCATIONS]:
-            if Path(potential_camera_location).is_dir():
-                return potential_camera_location
-
-        # Finally return the user directory
-        return self.settings[SETTING_LAST_MANUAL_CAMERA_LOCATION]
-
-    def most_likely_target_location(self):
-        # If the last used target location exists, return that
-        if Path(self.settings[SETTING_CURRENT_TARGET_LOCATION]).is_dir():
-            return self.settings[SETTING_CURRENT_TARGET_LOCATION]
-        
-        # If one of the previously used target locations works, return that
-        for potential_target_location in self.settings[SETTING_LIST_OF_TARGET_LOCATIONS]:
-            if Path(potential_target_location).is_dir():
-                return potential_target_location
-
-        # Finally return the user directory
-        return str(Path.home())
-
+# Main program
 if __name__ == '__main__':
     # Parse the arguments to allow the user to use a different settings file on different computers
     parser = argparse.ArgumentParser()

@@ -1,6 +1,4 @@
-import sys
-
-from PyQt5 import QtGui, QtCore, QtWidgets
+from PyQt5 import QtCore, QtWidgets
 from modules.sf_utilities import *
 
 class SelectReportFields(QtWidgets.QDialog):

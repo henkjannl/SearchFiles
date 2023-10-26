@@ -1,473 +1,224 @@
-[sf_settings.py 061] load_settings called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\11 Files and directories\SearchFiles\.app\asus.json
-[SearchFiles.py 278] clear_treeview called
-[SearchFiles.py 265] get_list_of_photos_from_camera called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\05 Taal
-[sf_file_selection.py 102] select_files called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\05 Taal containing  with extension 
-[sf_file_selection.py 024] File ConvertWoordenlijst.py
-[sf_file_selection.py 024] File qwertyuiop.py
-[sf_file_selection.py 024] File SeeFirstCharacters.py
-[sf_file_selection.py 024] File Woordenlijst.gz
-[sf_file_selection.py 024] File WordListEnglish.TXT
-[sf_file_selection.py 024] File Datastructuur.svg
-[sf_file_selection.py 024] File FindChineseEquivalents.py
-[sf_file_selection.py 024] File FindMatchingWords.py
-[sf_file_selection.py 024] File Output.txt
-[sf_file_selection.py 024] File Woordenlijst.gz
-[sf_file_selection.py 024] File words.txt
-[sf_file_selection.py 024] File AllCaps.json
-[sf_file_selection.py 024] File SimpleSelect.py
-[sf_file_selection.py 024] File WordFeud.py
-[sf_file_selection.py 024] File Aantal berekeningen EenLetterVerschil.ods
-[sf_file_selection.py 024] File Containing.py
-[sf_file_selection.py 024] File ContainingBond.py
-[sf_file_selection.py 024] File ContainsBond.txt
-[sf_file_selection.py 024] File ConvertWoordenlijst.py
-[sf_file_selection.py 024] File Datastructuur.py
-[sf_file_selection.py 024] File EenLetterVerschil.gz
-[sf_file_selection.py 024] File EenLetterVerschil.py
-[sf_file_selection.py 024] File EenLetterVerschil.txt
-[sf_file_selection.py 024] File EindigendOpZ.py
-[sf_file_selection.py 024] File geany_run_script.bat
-[sf_file_selection.py 024] File Jongensnamen.txt
-[sf_file_selection.py 024] File Meisjesnamen.txt
-[sf_file_selection.py 024] File ModifiedEenLetterVerschil.ods
-[sf_file_selection.py 024] File Output.txt
-[sf_file_selection.py 024] File ProcessEenLetterVerschil.py
-[sf_file_selection.py 024] File qwertyuiop.py
-[sf_file_selection.py 024] File Rijmen.py
-[sf_file_selection.py 024] File RijmenSimpel.py
-[sf_file_selection.py 024] File Spiegelbeeld.py
-[sf_file_selection.py 024] File StatesNames.py
-[sf_file_selection.py 024] File Totale tijd.ods
-[sf_file_selection.py 024] File TVtasAmerika.py
-[sf_file_selection.py 024] File VariantenPiDag.py
-[sf_file_selection.py 024] File Woorden met een bepaalde letter.py
-[sf_file_selection.py 024] File Woorden met een.txt
-[sf_file_selection.py 024] File WoordenDieEindigenOpEenNaam.py
-[sf_file_selection.py 024] File WoordenDieEindigenOpEenNaam.txt
-[sf_file_selection.py 024] File EindigendOpZ.py
-[sf_file_selection.py 024] File SnelleSelectie.py
-[sf_file_selection.py 024] File Woordenlijst.gz
-[sf_file_selection.py 024] File Woordpuzzeltje.py
-[sf_file_selection.py 024] File Woordenlijst.gz
-[sf_file_selection.py 024] File WoordSpelAndroid.py
-[sf_file_selection.py 024] File WordListCaps.txt
-[sf_file_selection.py 024] File StatesNames.cpython-35.pyc
-[sf_file_selection.py 024] File Button_end.png
-[sf_file_selection.py 024] File Button_selected.png
-[sf_file_selection.py 024] File Button_start.png
-[sf_file_selection.py 024] File Button_unselected.png
-[sf_file_selection.py 024] File Connector_diagonal_down.png
-[sf_file_selection.py 024] File Connector_diagonal_up.png
-[sf_file_selection.py 024] File Connector_horizontal.png
-[sf_file_selection.py 024] File Connector_vertical.png
-[sf_file_selection.py 024] File cPickle
-[sf_file_selection.py 024] File DisplayBitmap.py
-[sf_file_selection.py 024] File DisplayBitmap.py.u1conflict
-[sf_file_selection.py 024] File Accepted.txt
-[sf_file_selection.py 024] File basewrd3_f.txt
-[sf_file_selection.py 024] File CharacterReplacements.txt
-[sf_file_selection.py 024] File ConvertWoordenlijst.py
-[sf_file_selection.py 024] File Ignored.txt
-[sf_file_selection.py 024] File Ruzzle.py
-[sf_file_selection.py 024] File Woordenlijst.gz
-[sf_file_selection.py 024] File gzip
-[sf_file_selection.py 024] File Ruzzle.ods
-[sf_file_selection.py 024] File Ruzzle.svg
-[sf_file_selection.py 024] File Ruzzle.svg.u1conflict
-[sf_file_selection.py 024] File sys
-[sf_file_selection.py 024] File cPickle
-[sf_file_selection.py 024] File geany_run_script.bat
-[sf_file_selection.py 024] File gzip
-[sf_file_selection.py 024] File Ruzzle.py
-[sf_file_selection.py 024] File Ruzzle.svg
-[sf_file_selection.py 024] File sys
-[sf_file_selection.py 024] File Woordenlijst.gz
-[sf_file_selection.py 024] File Wordfeud.py
-[sf_file_selection.py 024] File cPickle
-[sf_file_selection.py 024] File DisplayBitmap.py
-[sf_file_selection.py 024] File geany_run_script.bat
-[sf_file_selection.py 024] File gzip
-[sf_file_selection.py 024] File Ruzzle.py
-[sf_file_selection.py 024] File Ruzzle.svg
-[sf_file_selection.py 024] File sys
-[sf_file_selection.py 024] File Woordenlijst.gz
-[sf_file_selection.py 024] File Woordenlijst.gz
-[sf_file_selection.py 024] File cPickle
-[sf_file_selection.py 024] File geany_run_script.bat
-[sf_file_selection.py 024] File gzip
-[sf_file_selection.py 024] File SpelletjeDieuwke.py
-[sf_file_selection.py 024] File SpelletjeDieuwke.svg
-[sf_file_selection.py 024] File sys
-[sf_file_selection.py 024] File Woordenlijst.gz
-[sf_file_selection.py 024] File Zoekmethode.ods
-[sf_file_selection.py 024] File cPickle
-[sf_file_selection.py 024] File geany_run_script.bat
-[sf_file_selection.py 024] File gzip
-[sf_file_selection.py 024] File SpelletjeDieuwe 1025 0055.txt
-[sf_file_selection.py 024] File SpelletjeDieuwe1024 2343.txt
-[sf_file_selection.py 024] File SpelletjeDieuwe1516.txt
-[sf_file_selection.py 024] File SpelletjeDieuwe7317.txt
-[sf_file_selection.py 024] File SpelletjeDieuwke.py
-[sf_file_selection.py 024] File sys
-[sf_file_selection.py 024] File Vierletterwoorden.txt
-[sf_file_selection.py 024] File Vijfletterwoorden.txt
-[sf_file_selection.py 024] File Woordenlijst.gz
-[sf_file_selection.py 024] File Zoekmethode.ods
-[sf_file_selection.py 024] File output.txt
-[sf_file_selection.py 024] File VierLetterWoorden 1025 0809.txt
-[sf_file_selection.py 024] File SpelletjeDieuwke5L.py
-[sf_file_selection.py 024] File VijfLetterWoorden 0329 2345.txt
-[sf_file_selection.py 024] File VijfLetterWoorden 0331 2232.txt
-[sf_file_selection.py 024] File Woordenlijst.gz
-[sf_file_selection.py 024] File arial.ttf
-[sf_file_selection.py 024] File Output.txt
-[sf_file_selection.py 024] File PrintLetters.py
-[sf_file_selection.py 024] File Ronde 0 Persoon 1buik.png
-[sf_file_selection.py 024] File Ronde 0 Persoon 1rug.png
-[sf_file_selection.py 024] File Ronde 0 Persoon 2buik.png
-[sf_file_selection.py 024] File Ronde 0 Persoon 2rug.png
-[sf_file_selection.py 024] File Ronde 0 Persoon 3buik.png
-[sf_file_selection.py 024] File Ronde 0 Persoon 3rug.png
-[sf_file_selection.py 024] File Ronde 0 Persoon 4buik.png
-[sf_file_selection.py 024] File Ronde 0 Persoon 4rug.png
-[sf_file_selection.py 024] File Ronde 1 Persoon 1buik.png
-[sf_file_selection.py 024] File Ronde 1 Persoon 1rug.png
-[sf_file_selection.py 024] File Ronde 1 Persoon 2buik.png
-[sf_file_selection.py 024] File Ronde 1 Persoon 2rug.png
-[sf_file_selection.py 024] File Ronde 1 Persoon 3buik.png
-[sf_file_selection.py 024] File Ronde 1 Persoon 3rug.png
-[sf_file_selection.py 024] File Ronde 1 Persoon 4buik.png
-[sf_file_selection.py 024] File Ronde 1 Persoon 4rug.png
-[sf_file_selection.py 024] File Ronde 2 Persoon 1buik.png
-[sf_file_selection.py 024] File Ronde 2 Persoon 1rug.png
-[sf_file_selection.py 024] File Ronde 2 Persoon 2buik.png
-[sf_file_selection.py 024] File Ronde 2 Persoon 2rug.png
-[sf_file_selection.py 024] File Ronde 2 Persoon 3buik.png
-[sf_file_selection.py 024] File Ronde 2 Persoon 3rug.png
-[sf_file_selection.py 024] File Ronde 2 Persoon 4buik.png
-[sf_file_selection.py 024] File Ronde 2 Persoon 4rug.png
-[sf_file_selection.py 024] File Ronde 3 Persoon 1buik.png
-[sf_file_selection.py 024] File Ronde 3 Persoon 1rug.png
-[sf_file_selection.py 024] File Ronde 3 Persoon 2buik.png
-[sf_file_selection.py 024] File Ronde 3 Persoon 2rug.png
-[sf_file_selection.py 024] File Ronde 3 Persoon 3buik.png
-[sf_file_selection.py 024] File Ronde 3 Persoon 3rug.png
-[sf_file_selection.py 024] File Ronde 3 Persoon 4buik.png
-[sf_file_selection.py 024] File Ronde 3 Persoon 4rug.png
-[sf_file_selection.py 024] File Ronde 4 Persoon 1buik.png
-[sf_file_selection.py 024] File Ronde 4 Persoon 1rug.png
-[sf_file_selection.py 024] File Ronde 4 Persoon 2buik.png
-[sf_file_selection.py 024] File Ronde 4 Persoon 2rug.png
-[sf_file_selection.py 024] File Ronde 4 Persoon 3buik.png
-[sf_file_selection.py 024] File Ronde 4 Persoon 3rug.png
-[sf_file_selection.py 024] File Ronde 4 Persoon 4buik.png
-[sf_file_selection.py 024] File Ronde 4 Persoon 4rug.png
-[sf_file_selection.py 024] File Ronde 5 Persoon 1buik.png
-[sf_file_selection.py 024] File Ronde 5 Persoon 1rug.png
-[sf_file_selection.py 024] File Ronde 5 Persoon 2buik.png
-[sf_file_selection.py 024] File Ronde 5 Persoon 2rug.png
-[sf_file_selection.py 024] File Ronde 5 Persoon 3buik.png
-[sf_file_selection.py 024] File Ronde 5 Persoon 3rug.png
-[sf_file_selection.py 024] File Ronde 5 Persoon 4buik.png
-[sf_file_selection.py 024] File Ronde 5 Persoon 4rug.png
-[sf_file_selection.py 024] File Ronde 6 Persoon 1buik.png
-[sf_file_selection.py 024] File Ronde 6 Persoon 1rug.png
-[sf_file_selection.py 024] File Ronde 6 Persoon 2buik.png
-[sf_file_selection.py 024] File Ronde 6 Persoon 2rug.png
-[sf_file_selection.py 024] File Ronde 6 Persoon 3buik.png
-[sf_file_selection.py 024] File Ronde 6 Persoon 3rug.png
-[sf_file_selection.py 024] File Ronde 6 Persoon 4buik.png
-[sf_file_selection.py 024] File Ronde 6 Persoon 4rug.png
-[sf_file_selection.py 024] File Ronde 7 Persoon 1buik.png
-[sf_file_selection.py 024] File Ronde 7 Persoon 1rug.png
-[sf_file_selection.py 024] File Ronde 7 Persoon 2buik.png
-[sf_file_selection.py 024] File Ronde 7 Persoon 2rug.png
-[sf_file_selection.py 024] File Ronde 7 Persoon 3buik.png
-[sf_file_selection.py 024] File Ronde 7 Persoon 3rug.png
-[sf_file_selection.py 024] File Ronde 7 Persoon 4buik.png
-[sf_file_selection.py 024] File Ronde 7 Persoon 4rug.png
-[sf_file_selection.py 024] File Ronde 8 Persoon 1buik.png
-[sf_file_selection.py 024] File Ronde 8 Persoon 1rug.png
-[sf_file_selection.py 024] File Ronde 8 Persoon 2buik.png
-[sf_file_selection.py 024] File Ronde 8 Persoon 2rug.png
-[sf_file_selection.py 024] File Ronde 8 Persoon 3buik.png
-[sf_file_selection.py 024] File Ronde 8 Persoon 3rug.png
-[sf_file_selection.py 024] File Ronde 8 Persoon 4buik.png
-[sf_file_selection.py 024] File Ronde 8 Persoon 4rug.png
-[sf_file_selection.py 024] File Ronde 9 Persoon 1buik.png
-[sf_file_selection.py 024] File Ronde 9 Persoon 1rug.png
-[sf_file_selection.py 024] File Ronde 9 Persoon 2buik.png
-[sf_file_selection.py 024] File Ronde 9 Persoon 2rug.png
-[sf_file_selection.py 024] File Ronde 9 Persoon 3buik.png
-[sf_file_selection.py 024] File Ronde 9 Persoon 3rug.png
-[sf_file_selection.py 024] File Ronde 9 Persoon 4buik.png
-[sf_file_selection.py 024] File Ronde 9 Persoon 4rug.png
-[sf_file_selection.py 024] File SpelletjeDieuwke5L.py
-[sf_file_selection.py 024] File VierLetterWoorden 0424 1532.txt
-[sf_file_selection.py 024] File Woordenlijst.gz
-[sf_file_selection.py 024] File Woordspelletjes van Dieuwke.doc
-[sf_file_selection.py 024] File Output.txt
-[sf_file_selection.py 024] File Twents.py
-[sf_file_selection.py 024] File Woordenlijst.gz
-[sf_file_selection.py 024] File cPickle
-[sf_file_selection.py 024] File geany_run_script.bat
-[sf_file_selection.py 024] File gzip
-[sf_file_selection.py 024] File Rijmen.py
-[sf_file_selection.py 024] File SixLetterWords.txt
-[sf_file_selection.py 024] File sys
-[sf_file_selection.py 024] File WordFeud.py
-[sf_file_selection.py 024] File WordFeud.py
-[sf_file_selection.py 024] File WordFeud.png
-[sf_file_selection.py 024] File WordFeud.py
-[sf_file_selection.py 024] File WordFeud.svg
-[sf_file_selection.py 024] File WordFeud.png
-[sf_file_selection.py 024] File WordFeud.py
-[sf_file_selection.py 024] File WordFeud.svg
-[sf_file_selection.py 024] File wx
-[sf_file_selection.py 109] 222 photo's found
-[SearchFiles.py 293] update_treeview called
-[SearchFiles.py 278] clear_treeview called
-[SearchFiles.py 319] Adding directory ConvertWordList
-[SearchFiles.py 325] Adding file ConvertWoordenlijst.py
-[SearchFiles.py 325] Adding file SeeFirstCharacters.py
-[SearchFiles.py 325] Adding file Woordenlijst.gz
-[SearchFiles.py 325] Adding file WordListEnglish.TXT
-[SearchFiles.py 325] Adding file qwertyuiop.py
-[SearchFiles.py 325] Adding file Datastructuur.svg
-[SearchFiles.py 319] Adding directory English
-[SearchFiles.py 325] Adding file FindChineseEquivalents.py
-[SearchFiles.py 319] Adding directory V01
-[SearchFiles.py 325] Adding file FindMatchingWords.py
-[SearchFiles.py 325] Adding file Output.txt
-[SearchFiles.py 325] Adding file Woordenlijst.gz
-[SearchFiles.py 325] Adding file words.txt
-[SearchFiles.py 319] Adding directory JSONlist
-[SearchFiles.py 325] Adding file AllCaps.json
-[SearchFiles.py 325] Adding file SimpleSelect.py
-[SearchFiles.py 325] Adding file WordFeud.py
-[SearchFiles.py 319] Adding directory Rijmen
-[SearchFiles.py 325] Adding file Aantal berekeningen EenLetterVerschil.ods
-[SearchFiles.py 325] Adding file Containing.py
-[SearchFiles.py 325] Adding file ContainingBond.py
-[SearchFiles.py 325] Adding file ContainsBond.txt
-[SearchFiles.py 325] Adding file ConvertWoordenlijst.py
-[SearchFiles.py 325] Adding file Datastructuur.py
-[SearchFiles.py 325] Adding file EenLetterVerschil.gz
-[SearchFiles.py 325] Adding file EenLetterVerschil.py
-[SearchFiles.py 325] Adding file EenLetterVerschil.txt
-[SearchFiles.py 325] Adding file EindigendOpZ.py
-[SearchFiles.py 325] Adding file Jongensnamen.txt
-[SearchFiles.py 325] Adding file Meisjesnamen.txt
-[SearchFiles.py 325] Adding file ModifiedEenLetterVerschil.ods
-[SearchFiles.py 325] Adding file Output.txt
-[SearchFiles.py 325] Adding file ProcessEenLetterVerschil.py
-[SearchFiles.py 325] Adding file Rijmen.py
-[SearchFiles.py 325] Adding file RijmenSimpel.py
-[SearchFiles.py 325] Adding file Spiegelbeeld.py
-[SearchFiles.py 325] Adding file StatesNames.py
-[SearchFiles.py 325] Adding file TVtasAmerika.py
-[SearchFiles.py 325] Adding file Totale tijd.ods
-[SearchFiles.py 325] Adding file VariantenPiDag.py
-[SearchFiles.py 325] Adding file WoordSpelAndroid.py
-[SearchFiles.py 325] Adding file Woorden met een bepaalde letter.py
-[SearchFiles.py 325] Adding file Woorden met een.txt
-[SearchFiles.py 325] Adding file WoordenDieEindigenOpEenNaam.py
-[SearchFiles.py 325] Adding file WoordenDieEindigenOpEenNaam.txt
-[SearchFiles.py 325] Adding file Woordenlijst.gz
-[SearchFiles.py 319] Adding directory Woordenlijst
-[SearchFiles.py 325] Adding file EindigendOpZ.py
-[SearchFiles.py 325] Adding file SnelleSelectie.py
-[SearchFiles.py 325] Adding file Woordenlijst.gz
-[SearchFiles.py 325] Adding file Woordpuzzeltje.py
-[SearchFiles.py 325] Adding file WordListCaps.txt
-[SearchFiles.py 319] Adding directory __pycache__
-[SearchFiles.py 325] Adding file StatesNames.cpython-35.pyc
-[SearchFiles.py 325] Adding file geany_run_script.bat
-[SearchFiles.py 325] Adding file qwertyuiop.py
-[SearchFiles.py 319] Adding directory Ruzzle
-[SearchFiles.py 325] Adding file Button_end.png
-[SearchFiles.py 325] Adding file Button_selected.png
-[SearchFiles.py 325] Adding file Button_start.png
-[SearchFiles.py 325] Adding file Button_unselected.png
-[SearchFiles.py 325] Adding file Connector_diagonal_down.png
-[SearchFiles.py 325] Adding file Connector_diagonal_up.png
-[SearchFiles.py 325] Adding file Connector_horizontal.png
-[SearchFiles.py 325] Adding file Connector_vertical.png
-[SearchFiles.py 325] Adding file DisplayBitmap.py
-[SearchFiles.py 325] Adding file DisplayBitmap.py.u1conflict
-[SearchFiles.py 319] Adding directory French
-[SearchFiles.py 325] Adding file Accepted.txt
-[SearchFiles.py 325] Adding file CharacterReplacements.txt
-[SearchFiles.py 325] Adding file ConvertWoordenlijst.py
-[SearchFiles.py 325] Adding file Ignored.txt
-[SearchFiles.py 325] Adding file Ruzzle.py
-[SearchFiles.py 325] Adding file Woordenlijst.gz
-[SearchFiles.py 325] Adding file basewrd3_f.txt
-[SearchFiles.py 325] Adding file Ruzzle.ods
-[SearchFiles.py 325] Adding file Ruzzle.svg
-[SearchFiles.py 325] Adding file Ruzzle.svg.u1conflict
-[SearchFiles.py 319] Adding directory V01
-[SearchFiles.py 325] Adding file Ruzzle.py
-[SearchFiles.py 325] Adding file Ruzzle.svg
-[SearchFiles.py 325] Adding file Woordenlijst.gz
-[SearchFiles.py 325] Adding file Wordfeud.py
-[SearchFiles.py 325] Adding file cPickle
-[SearchFiles.py 325] Adding file geany_run_script.bat
-[SearchFiles.py 325] Adding file gzip
-[SearchFiles.py 325] Adding file sys
-[SearchFiles.py 319] Adding directory V02
-[SearchFiles.py 325] Adding file DisplayBitmap.py
-[SearchFiles.py 325] Adding file Ruzzle.py
-[SearchFiles.py 325] Adding file Ruzzle.svg
-[SearchFiles.py 325] Adding file Woordenlijst.gz
-[SearchFiles.py 325] Adding file cPickle
-[SearchFiles.py 325] Adding file geany_run_script.bat
-[SearchFiles.py 325] Adding file gzip
-[SearchFiles.py 325] Adding file sys
-[SearchFiles.py 325] Adding file Woordenlijst.gz
-[SearchFiles.py 325] Adding file cPickle
-[SearchFiles.py 325] Adding file gzip
-[SearchFiles.py 325] Adding file sys
-[SearchFiles.py 319] Adding directory SpelletjeDieuwke
-[SearchFiles.py 319] Adding directory V1
-[SearchFiles.py 325] Adding file SpelletjeDieuwke.py
-[SearchFiles.py 325] Adding file SpelletjeDieuwke.svg
-[SearchFiles.py 325] Adding file Woordenlijst.gz
-[SearchFiles.py 325] Adding file Zoekmethode.ods
-[SearchFiles.py 325] Adding file cPickle
-[SearchFiles.py 325] Adding file geany_run_script.bat
-[SearchFiles.py 325] Adding file gzip
-[SearchFiles.py 325] Adding file sys
-[SearchFiles.py 319] Adding directory V2-4L
-[SearchFiles.py 325] Adding file SpelletjeDieuwe 1025 0055.txt
-[SearchFiles.py 325] Adding file SpelletjeDieuwe1024 2343.txt
-[SearchFiles.py 325] Adding file SpelletjeDieuwe1516.txt
-[SearchFiles.py 325] Adding file SpelletjeDieuwe7317.txt
-[SearchFiles.py 325] Adding file SpelletjeDieuwke.py
-[SearchFiles.py 325] Adding file Vierletterwoorden.txt
-[SearchFiles.py 325] Adding file Vijfletterwoorden.txt
-[SearchFiles.py 325] Adding file Woordenlijst.gz
-[SearchFiles.py 325] Adding file Zoekmethode.ods
-[SearchFiles.py 325] Adding file cPickle
-[SearchFiles.py 325] Adding file geany_run_script.bat
-[SearchFiles.py 325] Adding file gzip
-[SearchFiles.py 325] Adding file sys
-[SearchFiles.py 319] Adding directory V3-4L
-[SearchFiles.py 325] Adding file VierLetterWoorden 1025 0809.txt
-[SearchFiles.py 325] Adding file output.txt
-[SearchFiles.py 319] Adding directory V4-5L
-[SearchFiles.py 325] Adding file SpelletjeDieuwke5L.py
-[SearchFiles.py 325] Adding file VijfLetterWoorden 0329 2345.txt
-[SearchFiles.py 325] Adding file VijfLetterWoorden 0331 2232.txt
-[SearchFiles.py 325] Adding file Woordenlijst.gz
-[SearchFiles.py 319] Adding directory V5-4L
-[SearchFiles.py 325] Adding file Output.txt
-[SearchFiles.py 325] Adding file PrintLetters.py
-[SearchFiles.py 325] Adding file Ronde 0 Persoon 1buik.png
-[SearchFiles.py 325] Adding file Ronde 0 Persoon 1rug.png
-[SearchFiles.py 325] Adding file Ronde 0 Persoon 2buik.png
-[SearchFiles.py 325] Adding file Ronde 0 Persoon 2rug.png
-[SearchFiles.py 325] Adding file Ronde 0 Persoon 3buik.png
-[SearchFiles.py 325] Adding file Ronde 0 Persoon 3rug.png
-[SearchFiles.py 325] Adding file Ronde 0 Persoon 4buik.png
-[SearchFiles.py 325] Adding file Ronde 0 Persoon 4rug.png
-[SearchFiles.py 325] Adding file Ronde 1 Persoon 1buik.png
-[SearchFiles.py 325] Adding file Ronde 1 Persoon 1rug.png
-[SearchFiles.py 325] Adding file Ronde 1 Persoon 2buik.png
-[SearchFiles.py 325] Adding file Ronde 1 Persoon 2rug.png
-[SearchFiles.py 325] Adding file Ronde 1 Persoon 3buik.png
-[SearchFiles.py 325] Adding file Ronde 1 Persoon 3rug.png
-[SearchFiles.py 325] Adding file Ronde 1 Persoon 4buik.png
-[SearchFiles.py 325] Adding file Ronde 1 Persoon 4rug.png
-[SearchFiles.py 325] Adding file Ronde 2 Persoon 1buik.png
-[SearchFiles.py 325] Adding file Ronde 2 Persoon 1rug.png
-[SearchFiles.py 325] Adding file Ronde 2 Persoon 2buik.png
-[SearchFiles.py 325] Adding file Ronde 2 Persoon 2rug.png
-[SearchFiles.py 325] Adding file Ronde 2 Persoon 3buik.png
-[SearchFiles.py 325] Adding file Ronde 2 Persoon 3rug.png
-[SearchFiles.py 325] Adding file Ronde 2 Persoon 4buik.png
-[SearchFiles.py 325] Adding file Ronde 2 Persoon 4rug.png
-[SearchFiles.py 325] Adding file Ronde 3 Persoon 1buik.png
-[SearchFiles.py 325] Adding file Ronde 3 Persoon 1rug.png
-[SearchFiles.py 325] Adding file Ronde 3 Persoon 2buik.png
-[SearchFiles.py 325] Adding file Ronde 3 Persoon 2rug.png
-[SearchFiles.py 325] Adding file Ronde 3 Persoon 3buik.png
-[SearchFiles.py 325] Adding file Ronde 3 Persoon 3rug.png
-[SearchFiles.py 325] Adding file Ronde 3 Persoon 4buik.png
-[SearchFiles.py 325] Adding file Ronde 3 Persoon 4rug.png
-[SearchFiles.py 325] Adding file Ronde 4 Persoon 1buik.png
-[SearchFiles.py 325] Adding file Ronde 4 Persoon 1rug.png
-[SearchFiles.py 325] Adding file Ronde 4 Persoon 2buik.png
-[SearchFiles.py 325] Adding file Ronde 4 Persoon 2rug.png
-[SearchFiles.py 325] Adding file Ronde 4 Persoon 3buik.png
-[SearchFiles.py 325] Adding file Ronde 4 Persoon 3rug.png
-[SearchFiles.py 325] Adding file Ronde 4 Persoon 4buik.png
-[SearchFiles.py 325] Adding file Ronde 4 Persoon 4rug.png
-[SearchFiles.py 325] Adding file Ronde 5 Persoon 1buik.png
-[SearchFiles.py 325] Adding file Ronde 5 Persoon 1rug.png
-[SearchFiles.py 325] Adding file Ronde 5 Persoon 2buik.png
-[SearchFiles.py 325] Adding file Ronde 5 Persoon 2rug.png
-[SearchFiles.py 325] Adding file Ronde 5 Persoon 3buik.png
-[SearchFiles.py 325] Adding file Ronde 5 Persoon 3rug.png
-[SearchFiles.py 325] Adding file Ronde 5 Persoon 4buik.png
-[SearchFiles.py 325] Adding file Ronde 5 Persoon 4rug.png
-[SearchFiles.py 325] Adding file Ronde 6 Persoon 1buik.png
-[SearchFiles.py 325] Adding file Ronde 6 Persoon 1rug.png
-[SearchFiles.py 325] Adding file Ronde 6 Persoon 2buik.png
-[SearchFiles.py 325] Adding file Ronde 6 Persoon 2rug.png
-[SearchFiles.py 325] Adding file Ronde 6 Persoon 3buik.png
-[SearchFiles.py 325] Adding file Ronde 6 Persoon 3rug.png
-[SearchFiles.py 325] Adding file Ronde 6 Persoon 4buik.png
-[SearchFiles.py 325] Adding file Ronde 6 Persoon 4rug.png
-[SearchFiles.py 325] Adding file Ronde 7 Persoon 1buik.png
-[SearchFiles.py 325] Adding file Ronde 7 Persoon 1rug.png
-[SearchFiles.py 325] Adding file Ronde 7 Persoon 2buik.png
-[SearchFiles.py 325] Adding file Ronde 7 Persoon 2rug.png
-[SearchFiles.py 325] Adding file Ronde 7 Persoon 3buik.png
-[SearchFiles.py 325] Adding file Ronde 7 Persoon 3rug.png
-[SearchFiles.py 325] Adding file Ronde 7 Persoon 4buik.png
-[SearchFiles.py 325] Adding file Ronde 7 Persoon 4rug.png
-[SearchFiles.py 325] Adding file Ronde 8 Persoon 1buik.png
-[SearchFiles.py 325] Adding file Ronde 8 Persoon 1rug.png
-[SearchFiles.py 325] Adding file Ronde 8 Persoon 2buik.png
-[SearchFiles.py 325] Adding file Ronde 8 Persoon 2rug.png
-[SearchFiles.py 325] Adding file Ronde 8 Persoon 3buik.png
-[SearchFiles.py 325] Adding file Ronde 8 Persoon 3rug.png
-[SearchFiles.py 325] Adding file Ronde 8 Persoon 4buik.png
-[SearchFiles.py 325] Adding file Ronde 8 Persoon 4rug.png
-[SearchFiles.py 325] Adding file Ronde 9 Persoon 1buik.png
-[SearchFiles.py 325] Adding file Ronde 9 Persoon 1rug.png
-[SearchFiles.py 325] Adding file Ronde 9 Persoon 2buik.png
-[SearchFiles.py 325] Adding file Ronde 9 Persoon 2rug.png
-[SearchFiles.py 325] Adding file Ronde 9 Persoon 3buik.png
-[SearchFiles.py 325] Adding file Ronde 9 Persoon 3rug.png
-[SearchFiles.py 325] Adding file Ronde 9 Persoon 4buik.png
-[SearchFiles.py 325] Adding file Ronde 9 Persoon 4rug.png
-[SearchFiles.py 325] Adding file SpelletjeDieuwke5L.py
-[SearchFiles.py 325] Adding file VierLetterWoorden 0424 1532.txt
-[SearchFiles.py 325] Adding file Woordenlijst.gz
-[SearchFiles.py 325] Adding file arial.ttf
-[SearchFiles.py 325] Adding file Woordspelletjes van Dieuwke.doc
-[SearchFiles.py 319] Adding directory Twents
-[SearchFiles.py 325] Adding file Output.txt
-[SearchFiles.py 325] Adding file Twents.py
-[SearchFiles.py 325] Adding file Woordenlijst.gz
-[SearchFiles.py 319] Adding directory WordFeud
-[SearchFiles.py 325] Adding file Rijmen.py
-[SearchFiles.py 325] Adding file SixLetterWords.txt
-[SearchFiles.py 319] Adding directory V01
-[SearchFiles.py 325] Adding file WordFeud.py
-[SearchFiles.py 319] Adding directory V02
-[SearchFiles.py 325] Adding file WordFeud.py
-[SearchFiles.py 319] Adding directory V03
-[SearchFiles.py 325] Adding file WordFeud.png
-[SearchFiles.py 325] Adding file WordFeud.py
-[SearchFiles.py 325] Adding file WordFeud.svg
-[SearchFiles.py 325] Adding file WordFeud.png
-[SearchFiles.py 325] Adding file WordFeud.py
-[SearchFiles.py 325] Adding file WordFeud.svg
-[SearchFiles.py 325] Adding file cPickle
-[SearchFiles.py 325] Adding file geany_run_script.bat
-[SearchFiles.py 325] Adding file gzip
-[SearchFiles.py 325] Adding file sys
-[SearchFiles.py 325] Adding file wx
+[sf_settings.py 061] load_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
+[SearchFiles.py 268] clear_treeview called
+[sf_settings.py 093] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
+[sf_settings.py 093] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
+[sf_settings.py 093] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
+[sf_settings.py 093] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
+[sf_settings.py 093] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
+[sf_settings.py 093] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
+[SearchFiles.py 255] get_list_of_photos_from_camera called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\05 Taal\Twents
+[sf_file_selection.py 103] select_files called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\05 Taal\Twents containing o with extension txt
+[sf_file_selection.py 025] File Output.txt
+[sf_file_selection.py 110] 1 photo's found
+[SearchFiles.py 283] update_treeview called
+[SearchFiles.py 268] clear_treeview called
+[SearchFiles.py 315] Adding file Output.txt
+[SearchFiles.py 334] create_report called
+[sf_report_columns.py 056] Accepted
+[SearchFiles.py 338] [('Path', True), ('Filename', True), ('File size', True), ('Path and filename', True), ('Create date', True), ('Modified date', True), ('Accessed date', True), ('Image taken date', True), ('Image width', True), ('Image height', True)]
+[Image.py 379] Importing BlpImagePlugin
+[Image.py 379] Importing BmpImagePlugin
+[Image.py 379] Importing BufrStubImagePlugin
+[Image.py 379] Importing CurImagePlugin
+[Image.py 379] Importing DcxImagePlugin
+[Image.py 379] Importing DdsImagePlugin
+[Image.py 379] Importing EpsImagePlugin
+[Image.py 379] Importing FitsImagePlugin
+[Image.py 379] Importing FitsStubImagePlugin
+[Image.py 379] Importing FliImagePlugin
+[Image.py 379] Importing FpxImagePlugin
+[Image.py 382] Image: failed to import FpxImagePlugin: No module named 'olefile'
+[Image.py 379] Importing FtexImagePlugin
+[Image.py 379] Importing GbrImagePlugin
+[Image.py 379] Importing GifImagePlugin
+[Image.py 379] Importing GribStubImagePlugin
+[Image.py 379] Importing Hdf5StubImagePlugin
+[Image.py 379] Importing IcnsImagePlugin
+[Image.py 379] Importing IcoImagePlugin
+[Image.py 379] Importing ImImagePlugin
+[Image.py 379] Importing ImtImagePlugin
+[Image.py 379] Importing IptcImagePlugin
+[Image.py 379] Importing JpegImagePlugin
+[Image.py 379] Importing Jpeg2KImagePlugin
+[Image.py 379] Importing McIdasImagePlugin
+[Image.py 379] Importing MicImagePlugin
+[Image.py 382] Image: failed to import MicImagePlugin: No module named 'olefile'
+[Image.py 379] Importing MpegImagePlugin
+[Image.py 379] Importing MpoImagePlugin
+[Image.py 379] Importing MspImagePlugin
+[Image.py 379] Importing PalmImagePlugin
+[Image.py 379] Importing PcdImagePlugin
+[Image.py 379] Importing PcxImagePlugin
+[Image.py 379] Importing PdfImagePlugin
+[Image.py 379] Importing PixarImagePlugin
+[Image.py 379] Importing PngImagePlugin
+[Image.py 379] Importing PpmImagePlugin
+[Image.py 379] Importing PsdImagePlugin
+[Image.py 379] Importing SgiImagePlugin
+[Image.py 379] Importing SpiderImagePlugin
+[Image.py 379] Importing SunImagePlugin
+[Image.py 379] Importing TgaImagePlugin
+[Image.py 379] Importing TiffImagePlugin
+[Image.py 379] Importing WebPImagePlugin
+[Image.py 379] Importing WmfImagePlugin
+[Image.py 379] Importing XbmImagePlugin
+[Image.py 379] Importing XpmImagePlugin
+[Image.py 379] Importing XVThumbImagePlugin
+[sf_utilities.py 049] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\05 Taal\Twents\Output.txt
+[sf_utilities.py 055] PIL error cannot identify image file 'C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\05 Taal\\Twents\\Output.txt'
+[sf_settings.py 093] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
+[sf_settings.py 093] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
+[sf_settings.py 093] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
+[SearchFiles.py 255] get_list_of_photos_from_camera called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\05 Taal\Twents
+[sf_file_selection.py 103] select_files called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\05 Taal\Twents containing  with extension 
+[sf_file_selection.py 025] File Output.txt
+[sf_file_selection.py 025] File Twents.py
+[sf_file_selection.py 025] File Woordenlijst.gz
+[sf_file_selection.py 110] 3 photo's found
+[SearchFiles.py 283] update_treeview called
+[SearchFiles.py 268] clear_treeview called
+[SearchFiles.py 315] Adding file Output.txt
+[SearchFiles.py 315] Adding file Twents.py
+[SearchFiles.py 315] Adding file Woordenlijst.gz
+[sf_settings.py 093] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
+[sf_settings.py 093] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
+[sf_settings.py 093] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
+[SearchFiles.py 255] get_list_of_photos_from_camera called for C:\Users\henkj\Downloads
+[sf_file_selection.py 103] select_files called for C:\Users\henkj\Downloads containing  with extension 
+[sf_file_selection.py 025] File 14914_458767_20231011210401.pdf
+[sf_file_selection.py 025] File 20230121_202149.jpg
+[sf_file_selection.py 025] File 20230121_202152.jpg
+[sf_file_selection.py 025] File 20230121_202153.jpg
+[sf_file_selection.py 025] File 20230121_202154.jpg
+[sf_file_selection.py 025] File AV Lammertink Isolatie.pdf
+[sf_file_selection.py 025] File bahnschrift.ttf
+[sf_file_selection.py 025] File Delivery slip.pdf
+[sf_file_selection.py 025] File desktop.ini
+[sf_file_selection.py 025] File Factuur 2023-0358.pdf
+[sf_file_selection.py 025] File logo.svg
+[sf_file_selection.py 025] File retouretiket.pdf
+[sf_file_selection.py 025] File Delivery slip.pdf
+[sf_file_selection.py 025] File Factuur 2023-0358.pdf
+[sf_file_selection.py 025] File logo.svg
+[sf_file_selection.py 025] File retouretiket.pdf
+[sf_file_selection.py 025] File logo.svg
+[sf_file_selection.py 025] File retouretiket.pdf
+[sf_file_selection.py 025] File wiztree_4_15_setup.exe
+[sf_file_selection.py 110] 19 photo's found
+[SearchFiles.py 283] update_treeview called
+[SearchFiles.py 268] clear_treeview called
+[SearchFiles.py 315] Adding file 14914_458767_20231011210401.pdf
+[SearchFiles.py 315] Adding file 20230121_202149.jpg
+[SearchFiles.py 315] Adding file 20230121_202152.jpg
+[SearchFiles.py 315] Adding file 20230121_202153.jpg
+[SearchFiles.py 315] Adding file 20230121_202154.jpg
+[SearchFiles.py 315] Adding file AV Lammertink Isolatie.pdf
+[SearchFiles.py 315] Adding file Delivery slip.pdf
+[SearchFiles.py 315] Adding file Factuur 2023-0358.pdf
+[SearchFiles.py 309] Adding directory Subdirectory
+[SearchFiles.py 315] Adding file Delivery slip.pdf
+[SearchFiles.py 315] Adding file Factuur 2023-0358.pdf
+[SearchFiles.py 309] Adding directory Level 2 subdir
+[SearchFiles.py 315] Adding file logo.svg
+[SearchFiles.py 315] Adding file retouretiket.pdf
+[SearchFiles.py 315] Adding file logo.svg
+[SearchFiles.py 315] Adding file retouretiket.pdf
+[SearchFiles.py 315] Adding file bahnschrift.ttf
+[SearchFiles.py 315] Adding file desktop.ini
+[SearchFiles.py 315] Adding file logo.svg
+[SearchFiles.py 315] Adding file retouretiket.pdf
+[SearchFiles.py 315] Adding file wiztree_4_15_setup.exe
+[SearchFiles.py 334] create_report called
+[sf_report_columns.py 056] Accepted
+[SearchFiles.py 338] [('Path', True), ('Filename', True), ('File size', True), ('Path and filename', True), ('Create date', True), ('Modified date', True), ('Accessed date', True), ('Image taken date', True), ('Image width', True), ('Image height', True)]
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\14914_458767_20231011210401.pdf
+[sf_utilities.py 055] PIL error cannot identify image file 'C:\\Users\\henkj\\Downloads\\14914_458767_20231011210401.pdf'
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\20230121_202149.jpg
+[TiffImagePlugin.py 850] tag: ImageWidth (256) - type: long (4) - value: b'\xa0\x0f\x00\x00'
+[TiffImagePlugin.py 850] tag: ImageLength (257) - type: long (4) - value: b'\xb8\x0b\x00\x00'
+[TiffImagePlugin.py 850] tag: Make (271) - type: string (2) Tag Location: 46 - Data Location: 170 - value: b'samsung\x00'
+[TiffImagePlugin.py 850] tag: Model (272) - type: string (2) Tag Location: 58 - Data Location: 178 - value: b'SM-G990B\x00'
+[TiffImagePlugin.py 850] tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+[TiffImagePlugin.py 850] tag: XResolution (282) - type: rational (5) Tag Location: 82 - Data Location: 222 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+[TiffImagePlugin.py 850] tag: YResolution (283) - type: rational (5) Tag Location: 94 - Data Location: 230 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+[TiffImagePlugin.py 850] tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+[TiffImagePlugin.py 850] tag: Software (305) - type: string (2) Tag Location: 118 - Data Location: 188 - value: b'G990BXXS2DVL1\x00'
+[TiffImagePlugin.py 850] tag: DateTime (306) - type: string (2) Tag Location: 130 - Data Location: 202 - value: b'2023:01:21 20:21:49\x00'
+[TiffImagePlugin.py 850] tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+[TiffImagePlugin.py 850] tag: ExifIFD (34665) - type: long (4) - value: b'\xee\x00\x00\x00'
+[TiffImagePlugin.py 850] tag: GPSInfoIFD (34853) - type: long (4) - value: b'\xda\x02\x00\x00'
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\20230121_202152.jpg
+[TiffImagePlugin.py 850] tag: ImageWidth (256) - type: long (4) - value: b'\xa0\x0f\x00\x00'
+[TiffImagePlugin.py 850] tag: ImageLength (257) - type: long (4) - value: b'\xb8\x0b\x00\x00'
+[TiffImagePlugin.py 850] tag: Make (271) - type: string (2) Tag Location: 46 - Data Location: 170 - value: b'samsung\x00'
+[TiffImagePlugin.py 850] tag: Model (272) - type: string (2) Tag Location: 58 - Data Location: 178 - value: b'SM-G990B\x00'
+[TiffImagePlugin.py 850] tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+[TiffImagePlugin.py 850] tag: XResolution (282) - type: rational (5) Tag Location: 82 - Data Location: 222 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+[TiffImagePlugin.py 850] tag: YResolution (283) - type: rational (5) Tag Location: 94 - Data Location: 230 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+[TiffImagePlugin.py 850] tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+[TiffImagePlugin.py 850] tag: Software (305) - type: string (2) Tag Location: 118 - Data Location: 188 - value: b'G990BXXS2DVL1\x00'
+[TiffImagePlugin.py 850] tag: DateTime (306) - type: string (2) Tag Location: 130 - Data Location: 202 - value: b'2023:01:21 20:21:52\x00'
+[TiffImagePlugin.py 850] tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+[TiffImagePlugin.py 850] tag: ExifIFD (34665) - type: long (4) - value: b'\xee\x00\x00\x00'
+[TiffImagePlugin.py 850] tag: GPSInfoIFD (34853) - type: long (4) - value: b'\xda\x02\x00\x00'
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\20230121_202153.jpg
+[TiffImagePlugin.py 850] tag: ImageWidth (256) - type: long (4) - value: b'\xa0\x0f\x00\x00'
+[TiffImagePlugin.py 850] tag: ImageLength (257) - type: long (4) - value: b'\xb8\x0b\x00\x00'
+[TiffImagePlugin.py 850] tag: Make (271) - type: string (2) Tag Location: 46 - Data Location: 170 - value: b'samsung\x00'
+[TiffImagePlugin.py 850] tag: Model (272) - type: string (2) Tag Location: 58 - Data Location: 178 - value: b'SM-G990B\x00'
+[TiffImagePlugin.py 850] tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+[TiffImagePlugin.py 850] tag: XResolution (282) - type: rational (5) Tag Location: 82 - Data Location: 222 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+[TiffImagePlugin.py 850] tag: YResolution (283) - type: rational (5) Tag Location: 94 - Data Location: 230 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+[TiffImagePlugin.py 850] tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+[TiffImagePlugin.py 850] tag: Software (305) - type: string (2) Tag Location: 118 - Data Location: 188 - value: b'G990BXXS2DVL1\x00'
+[TiffImagePlugin.py 850] tag: DateTime (306) - type: string (2) Tag Location: 130 - Data Location: 202 - value: b'2023:01:21 20:21:54\x00'
+[TiffImagePlugin.py 850] tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+[TiffImagePlugin.py 850] tag: ExifIFD (34665) - type: long (4) - value: b'\xee\x00\x00\x00'
+[TiffImagePlugin.py 850] tag: GPSInfoIFD (34853) - type: long (4) - value: b'\xda\x02\x00\x00'
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\20230121_202154.jpg
+[TiffImagePlugin.py 850] tag: ImageWidth (256) - type: long (4) - value: b'\xa0\x0f\x00\x00'
+[TiffImagePlugin.py 850] tag: ImageLength (257) - type: long (4) - value: b'\xb8\x0b\x00\x00'
+[TiffImagePlugin.py 850] tag: Make (271) - type: string (2) Tag Location: 46 - Data Location: 170 - value: b'samsung\x00'
+[TiffImagePlugin.py 850] tag: Model (272) - type: string (2) Tag Location: 58 - Data Location: 178 - value: b'SM-G990B\x00'
+[TiffImagePlugin.py 850] tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+[TiffImagePlugin.py 850] tag: XResolution (282) - type: rational (5) Tag Location: 82 - Data Location: 222 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+[TiffImagePlugin.py 850] tag: YResolution (283) - type: rational (5) Tag Location: 94 - Data Location: 230 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+[TiffImagePlugin.py 850] tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+[TiffImagePlugin.py 850] tag: Software (305) - type: string (2) Tag Location: 118 - Data Location: 188 - value: b'G990BXXS2DVL1\x00'
+[TiffImagePlugin.py 850] tag: DateTime (306) - type: string (2) Tag Location: 130 - Data Location: 202 - value: b'2023:01:21 20:21:55\x00'
+[TiffImagePlugin.py 850] tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+[TiffImagePlugin.py 850] tag: ExifIFD (34665) - type: long (4) - value: b'\xee\x00\x00\x00'
+[TiffImagePlugin.py 850] tag: GPSInfoIFD (34853) - type: long (4) - value: b'\xda\x02\x00\x00'
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\AV Lammertink Isolatie.pdf
+[sf_utilities.py 055] PIL error cannot identify image file 'C:\\Users\\henkj\\Downloads\\AV Lammertink Isolatie.pdf'
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\bahnschrift.ttf
+[sf_utilities.py 055] PIL error cannot identify image file 'C:\\Users\\henkj\\Downloads\\bahnschrift.ttf'
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\Delivery slip.pdf
+[sf_utilities.py 055] PIL error cannot identify image file 'C:\\Users\\henkj\\Downloads\\Delivery slip.pdf'
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\desktop.ini
+[sf_utilities.py 055] PIL error cannot identify image file 'C:\\Users\\henkj\\Downloads\\desktop.ini'
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\Factuur 2023-0358.pdf
+[sf_utilities.py 055] PIL error cannot identify image file 'C:\\Users\\henkj\\Downloads\\Factuur 2023-0358.pdf'
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\logo.svg
+[sf_utilities.py 055] PIL error cannot identify image file 'C:\\Users\\henkj\\Downloads\\logo.svg'
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\retouretiket.pdf
+[sf_utilities.py 055] PIL error cannot identify image file 'C:\\Users\\henkj\\Downloads\\retouretiket.pdf'
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\wiztree_4_15_setup.exe
+[sf_utilities.py 055] PIL error cannot identify image file 'C:\\Users\\henkj\\Downloads\\wiztree_4_15_setup.exe'
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\Subdirectory\Delivery slip.pdf
+[sf_utilities.py 055] PIL error cannot identify image file 'C:\\Users\\henkj\\Downloads\\Subdirectory\\Delivery slip.pdf'
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\Subdirectory\Factuur 2023-0358.pdf
+[sf_utilities.py 055] PIL error cannot identify image file 'C:\\Users\\henkj\\Downloads\\Subdirectory\\Factuur 2023-0358.pdf'
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\Subdirectory\logo.svg
+[sf_utilities.py 055] PIL error cannot identify image file 'C:\\Users\\henkj\\Downloads\\Subdirectory\\logo.svg'
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\Subdirectory\retouretiket.pdf
+[sf_utilities.py 055] PIL error cannot identify image file 'C:\\Users\\henkj\\Downloads\\Subdirectory\\retouretiket.pdf'
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\Subdirectory\Level 2 subdir\logo.svg
+[sf_utilities.py 055] PIL error cannot identify image file 'C:\\Users\\henkj\\Downloads\\Subdirectory\\Level 2 subdir\\logo.svg'
+[sf_utilities.py 049] image_size called for C:\Users\henkj\Downloads\Subdirectory\Level 2 subdir\retouretiket.pdf
+[sf_utilities.py 055] PIL error cannot identify image file 'C:\\Users\\henkj\\Downloads\\Subdirectory\\Level 2 subdir\\retouretiket.pdf'
+[sf_settings.py 093] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
+[SearchFiles.py 334] create_report called
+[sf_report_columns.py 056] Accepted
+[SearchFiles.py 338] [('Path', True), ('Filename', True), ('File size', True), ('Create date', True), ('Modified date', True), ('Accessed date', True), ('Image taken date', True), ('Image width', True), ('Image height', True), ('Path and filename', True)]
+[sf_settings.py 093] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json

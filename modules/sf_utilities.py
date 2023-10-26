@@ -1,6 +1,6 @@
 import logging
 from pathlib import Path
-from PyQt5 import QtGui, QtCore, QtWidgets
+from PyQt5 import QtGui
 
 logging.getLogger("exifread").setLevel(logging.ERROR)
 
@@ -12,7 +12,6 @@ def app_icon(file):
     """"Return an icon in the .app dir"""
     icon_file = str(Path( Path(__file__).parent.parent, '.icons', file ))
     return QtGui.QIcon( icon_file )
-
 
 def image_taken_date(file):
     """Attempts to retrieve original date and time from a photo

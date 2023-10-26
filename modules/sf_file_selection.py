@@ -2,6 +2,7 @@ import logging
 from datetime import datetime
 from pathlib import Path
 from PyQt5 import QtCore
+import pyperclip
 
 from modules.sf_constants import *
 from modules.sf_utilities import *
@@ -155,5 +156,4 @@ class File_Selection(QtCore.QObject):
         for selected_file in self.selected_files:    
             export.append('\t'.join([str(selected_file.field(column)) for column in selected_columns]))
 
-        import pyperclip
         pyperclip.copy('\n'.join(export))

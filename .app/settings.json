@@ -1,7 +1,8 @@
 {
     "Version": 1,
-    "RootDir": "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\05 Taal",
+    "RootDir": "C:\\Users\\henkj\\Downloads",
     "RecentDirectories": [
+        "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\05 Taal\\Twents",
         "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\05 Taal",
         ".",
         "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python",
@@ -50,35 +51,35 @@
         ],
         [
             "File size",
-            false
-        ],
-        [
-            "Path and filename",
             true
         ],
         [
             "Create date",
-            false
+            true
         ],
         [
             "Modified date",
-            false
+            true
         ],
         [
             "Accessed date",
-            false
+            true
         ],
         [
             "Image taken date",
-            false
+            true
         ],
         [
             "Image width",
-            false
+            true
         ],
         [
             "Image height",
-            false
+            true
+        ],
+        [
+            "Path and filename",
+            true
         ]
     ]
 }
