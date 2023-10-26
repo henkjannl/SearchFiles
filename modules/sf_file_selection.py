@@ -1,15 +1,20 @@
+"""sf_file_selection defines:
+- a class Selected_File containing files, which can be shown in a PyQt5 treeview
+- a class File_Selection that holds the list of selected files
+"""
+
 import logging
 from datetime import datetime
 from pathlib import Path
 from PyQt5 import QtCore
 import pyperclip
 
-from modules.sf_constants import *
-from modules.sf_utilities import *
+import modules.sf_constants as const
+from modules.sf_utilities import image_size, image_taken_date
 
 # This object sits in the parallel thread that moves files from camera to computer
-class Selected_File(QtCore.QObject):
-    """File to be moved from camera to harddisk"""
+class SelectedFile(QtCore.QObject):
+    """File to be shown in a PyQt tree view"""
 
     def __init__(self, identifier, root, entry):
         """Create new standard item with file info
@@ -22,65 +27,72 @@ class Selected_File(QtCore.QObject):
         self.entry = entry
         self.image_size = None
         self.parents = entry.relative_to(root).parts[:-1]
-        logging.info(f"File {entry.name}")
 
-    def file_size(self): 
-        """File size of the photo"""
+    def file_size(self):
+        """File size of the file"""
         return self.entry.stat().st_size
-    
+
     def created(self):
-        return datetime.fromtimestamp(self.entry.stat().st_ctime).strftime('%Y-%m-%d %H:%M:%S')
-    
+        """The date and time the file was created, formatted as string"""
+        return datetime.fromtimestamp(self.entry.stat().st_ctime).strftime(const.DATE_FMT)
+
     def modified(self):
-        return datetime.fromtimestamp(self.entry.stat().st_mtime).strftime('%Y-%m-%d %H:%M:%S')
+        """The date and time the file was modified, formatted as string"""
+        return datetime.fromtimestamp(self.entry.stat().st_mtime).strftime(const.DATE_FMT)
 
     def accessed(self):
-        return datetime.fromtimestamp(self.entry.stat().st_atime).strftime('%Y-%m-%d %H:%M:%S')
+        """The date and time the file was last accessed, formatted as string"""
+        return datetime.fromtimestamp(self.entry.stat().st_atime).strftime(const.DATE_FMT)
 
     def directory(self):
         """Directory in which the file resides"""
         return str(self.entry.parent)
-    
+
     def full_path(self):
+        """The full path of the file"""
         return str(self.entry.resolve() )
-    
+
     def image_width(self):
-        if self.image_size==None:
+        """The width of the image, if the file is an image, or an empty string if it is not"""
+        if self.image_size is None:
             self.image_size = image_size(self.entry)
 
         return self.image_size[0]
 
     def image_height(self):
-        if self.image_size==None:
+        """The height of the image, if the file is an image, or an empty string if it is not"""
+        if self.image_size is None:
             self.image_size = image_size(self.entry)
 
         return self.image_size[0]
 
     def field(self, field):
-        if field==COL_PATH:
+        """Returns the field, if the field is specified as a string"""
+        #ToDo: redefine as a directory
+        if field==const.COL_PATH:
             return self.directory()
-        elif field==COL_FILE_NAME:
+        elif field==const.COL_FILE_NAME:
             return self.entry.name
-        elif field==COL_FILE_SIZE:
+        elif field==const.COL_FILE_SIZE:
             return self.file_size()
-        elif field==COL_PATH_AND_NAME:
+        elif field==const.COL_PATH_AND_NAME:
             return self.full_path()
-        elif field==COL_CREATE_DATE:
+        elif field==const.COL_CREATE_DATE:
             return self.created()
-        elif field==COL_MODIFIED_DATE:
+        elif field==const.COL_MODIFIED_DATE:
             return self.modified()
-        elif field==COL_ACCESSED_DATE:
+        elif field==const.COL_ACCESSED_DATE:
             return self.accessed()
-        elif field==COL_IMAGE_TAKEN_DATE:
+        elif field==const.COL_IMAGE_TAKEN_DATE:
             return image_taken_date(self.entry)
-        elif field==COL_IMAGE_WIDTH:
+        elif field==const.COL_IMAGE_WIDTH:
             return self.image_width()
-        elif field==COL_IMAGE_HEIGHT:
+        elif field==const.COL_IMAGE_HEIGHT:
             return self.image_height()
         else:
             return "Invalid field"
-    
-class File_Selection(QtCore.QObject):
+
+class FileSelection(QtCore.QObject):
     """Creates list of photos on camera and function that moves them to harddisk"""
 
     def __init__(self):
@@ -88,6 +100,7 @@ class File_Selection(QtCore.QObject):
         The unique identifier is needed to link a file in the GUI to a file in the list.
         If a file in the list is directly displayed in the GUI, a multithreading problem occurs"""
         super().__init__(None)
+        self.root_directory = ''
         self.unique_identifier = 0
         self.filter_extension = ''
         self.filter_filename = ''
@@ -100,14 +113,16 @@ class File_Selection(QtCore.QObject):
         self.root_directory = Path(root_directory)
         self.filter_extension = filter_extension
         self.filter_filename = filter_filename
-        logging.info(f"select_files called for {root_directory} containing {filter_filename} with extension {filter_extension}")
+        logging.info("select_files called for %s containing %s with extension %s",
+                     root_directory, filter_filename, filter_extension)
 
         self.__add_to_selection__( Path(root_directory) )
 
         # Sort files, directories first, then sort on filename
-        #self.selected_files.sort( key= lambda selected_file: (-len(selected_file.entry.parts), str(selected_file.entry.name.lower() ) ) )
-        self.selected_files.sort( key= lambda selected_file: (selected_file.entry.is_dir(), str(selected_file.full_path() ) ) )
-        logging.info(f"{len(self.selected_files)} photo's found")
+        self.selected_files.sort( key= lambda selected_file:
+            (selected_file.entry.is_dir(), str(selected_file.full_path() ) ) )
+
+        logging.info("%d photo's found", len(self.selected_files) )
 
     def requirement(self, entry):
         """Filter the files that were found
@@ -116,7 +131,7 @@ class File_Selection(QtCore.QObject):
         # Do not select directories
         if entry.is_dir():
             return False
-        
+
         # Do not select if extension requirement is not met
         # ToDo: compare actual extension, instead of endswith
         # ToDo: ensure filter '' is still selecting all files
@@ -126,34 +141,36 @@ class File_Selection(QtCore.QObject):
         # Do not select if filename filter requirement is not met
         if not self.filter_filename.lower() in entry.name.lower():
             return False
-        
+
         # Select the file
         return True
-    
+
     def __add_to_selection__(self, path):
         """Recursive function that scans the disk and add relevant files to the selection"""
         for entry in path.iterdir():
-            
+
             if self.requirement(entry):
                 # Add new member to the selected_files list
-                selected_file = Selected_File(self.unique_identifier, self.root_directory, entry)
+                selected_file = SelectedFile(self.unique_identifier, self.root_directory, entry)
                 self.selected_files.append(selected_file)
                 self.unique_identifier+=1
-                
+
             if entry.is_dir():
                 # Recursively search subdirectories
                 self.__add_to_selection__(entry)
 
     def copy_report_to_clipboard(self, report_columns):
-        # Create a list with only the selected columns in the report
+        """Create a list with only the selected columns in the report"""
         selected_columns = [text for text, checked in report_columns if checked]
 
         # Sort in different order, shorter paths first
-        self.selected_files.sort( key= lambda selected_file: (len(selected_file.entry.parts), str(selected_file.entry.name.lower() ) ) )
+        self.selected_files.sort( key= lambda selected_file:
+                        (len(selected_file.entry.parts), str(selected_file.entry.name.lower() ) ) )
 
         export = [ '\t'.join(selected_columns) ]
 
-        for selected_file in self.selected_files:    
-            export.append('\t'.join([str(selected_file.field(column)) for column in selected_columns]))
+        for selected_file in self.selected_files:
+            export.append('\t'.join([str(selected_file.field(column)) \
+                                     for column in selected_columns]))
 
         pyperclip.copy('\n'.join(export))

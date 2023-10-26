@@ -7,63 +7,50 @@
 To do:
 - repeat linting
 - search tree:
-    - improve sorting directories and files
     - collapse / expand all with right mouse button
 - segment window __init__ code in smaller functions
 - parallel thread to search files, with dialog that can cancel the search
 - confirmation message that the files are copied to the clipboard
 - first find out if this is a good idea:
-    - class Selected_File() can inherit from both QtCore.QObject and Path(), instead of creating a self.entry field
+    - class Selected_File() can inherit from both QtCore.QObject and
+      Path(), instead of creating a self.entry field
     - property decorators for file properties
 - add sort field
-- reconsider if we want to store the extension field
+- reconsider storing the extension field in recently used list
 """
 
 import argparse
 import sys
 import logging
 from pathlib import Path
-import argparse
 
 from PyQt5 import QtGui, QtCore, QtWidgets
 
 from modules.sf_settings import Settings
 from modules.sf_report_columns import SelectReportFields
 from modules.sf_utilities import app_icon
-from modules.sf_file_selection import File_Selection
+from modules.sf_file_selection import FileSelection
 
 logging.basicConfig(stream=open(r'.\log.txt', 'w', encoding='utf-8'),
                     level=logging.DEBUG,
                     format='[%(filename)s %(lineno)03d] %(message)s')
 
 # These items sit in a list in the main thread
-class File_Item(QtGui.QStandardItem):
-    
+class FileItem(QtGui.QStandardItem):
+    """Item to be displayed in the model view"""
+
     def __init__(self, selected_file):
         """The item in the first column, giving the name of the file"""
         super().__init__(app_icon("icon_file.svg"), selected_file.entry.name)
 
-class DragButton(QtWidgets.QPushButton):
-
-    def __init__(self, label, parent):
-        super().__init__(label, parent)
-
-    def mouseMoveEvent(self, e):
-
-        if e.buttons() == QtCore.Qt.LeftButton:
-            drag = QtGui.QDrag(self)
-            mime = QtCore.QMimeData()
-            drag.setMimeData(mime)
-            drag.exec_(QtCore.Qt.MoveAction)
-            print('drag.exec_')
 
 class Window(QtWidgets.QMainWindow):
     """Main window"""
 
-    def __init__(self, parent=None, settings_file = "settings.json"):
+    def __init__(self, parent=None, filename_settings = "settings.json"):
         super().__init__(parent)
 
-        self.root_directory = Path().home()        
+        self.root_directory = Path().home()
 
         # Create window
         self.setWindowTitle("Search files on the computer")
@@ -71,11 +58,11 @@ class Window(QtWidgets.QMainWindow):
         self.resize(1200, 800)
 
         # Settings
-        self.settings = Settings(settings_file)
+        self.settings = Settings(filename_settings)
 
         # Object containing selected files
-        self.file_selection = File_Selection()
-        
+        self.file_selection = FileSelection()
+
         # Create a vertical layout with status
         main_layout = QtWidgets.QVBoxLayout()
 
@@ -89,7 +76,7 @@ class Window(QtWidgets.QMainWindow):
         icon_folder = app_icon('icon_folder.svg')
         root_dir_btn = QtWidgets.QPushButton(icon_folder, '', self)
         root_dir_btn.setIconSize(QtCore.QSize(24,24))
-        root_dir_btn.clicked.connect(self.select_root_file)        
+        root_dir_btn.clicked.connect(self.select_root_file)
         root_dir_layout.addWidget(root_dir_btn, stretch=0)
 
         # Combo box with path
@@ -99,8 +86,8 @@ class Window(QtWidgets.QMainWindow):
         self.root_dir_combo.setEditable(True)
         self.root_dir_combo.currentIndexChanged.connect(self.root_directory_index_changed)
         self.root_dir_combo.currentTextChanged.connect(self.root_directory_text_changed)
-        
-        root_dir_layout.addWidget(self.root_dir_combo, stretch=1)        
+
+        root_dir_layout.addWidget(self.root_dir_combo, stretch=1)
         root_dir_box.setLayout(root_dir_layout)
         main_layout.addWidget(root_dir_box)
 
@@ -109,21 +96,20 @@ class Window(QtWidgets.QMainWindow):
 
         ext_lbl = QtWidgets.QLabel('File extension')
         #ext_lbl.setFont(font)
-        filter_layout.addWidget(ext_lbl, 0, 0)    
+        filter_layout.addWidget(ext_lbl, 0, 0)
 
         self.le_file_extension = QtWidgets.QComboBox(self)
         self.le_file_extension.setFont(font)
-        #self.le_file_extension.addItems(['', 'docx', 'xlsx', 'pptx', 'pdf', 'odt', 'odt', 'csv', 'py', 'svg', 'png', 'jpg', 'jpeg', 'gif', 'txt', 'zip'])
         self.le_file_extension.addItems(self.settings.recent_extensions)
         self.le_file_extension.setEditable(True)
         self.le_file_extension.setCurrentText(self.settings.filter_extension)
         self.le_file_extension.currentTextChanged.connect(self.filter_extension_changed)
-        
-        filter_layout.addWidget(self.le_file_extension, 0, 1)    
+
+        filter_layout.addWidget(self.le_file_extension, 0, 1)
 
         nam_lbl = QtWidgets.QLabel('Filename contains')
         #nam_lbl.setFont(font)
-        filter_layout.addWidget(nam_lbl, 0, 2)    
+        filter_layout.addWidget(nam_lbl, 0, 2)
 
         self.le_filename_contains = QtWidgets.QComboBox(self)
         self.le_filename_contains.setFont(font)
@@ -131,11 +117,11 @@ class Window(QtWidgets.QMainWindow):
         self.le_filename_contains.addItems(self.settings.recent_filename_filters)
         self.le_filename_contains.setCurrentText(self.settings.filter_filename)
         self.le_filename_contains.currentTextChanged.connect(self.filename_contains_changed)
-        filter_layout.addWidget(self.le_filename_contains, 0, 3)    
+        filter_layout.addWidget(self.le_filename_contains, 0, 3)
 
         for col, stch in [(0,0), (1,1), (2,0), (3,3)]:
             filter_layout.setColumnStretch(col, stch)
-        filter_box.setLayout(filter_layout)    
+        filter_box.setLayout(filter_layout)
         main_layout.addWidget(filter_box)
 
         # Execute box
@@ -145,7 +131,8 @@ class Window(QtWidgets.QMainWindow):
         search_btn.clicked.connect(self.search_files)
         self.execute_lyt.addWidget(search_btn)
 
-        self.report_btn = QtWidgets.QPushButton(app_icon('icon_report.svg'),'Copy report to clipboard')
+        self.report_btn = QtWidgets.QPushButton(app_icon('icon_report.svg'),
+                                                'Copy report to clipboard')
         self.report_btn.clicked.connect(self.copy_report_to_clipboard)
         self.report_btn.setEnabled(False)
         self.execute_lyt.addWidget(self.report_btn)
@@ -174,109 +161,66 @@ class Window(QtWidgets.QMainWindow):
         widget.setLayout(main_layout)
         self.setCentralWidget(widget)
 
-        # Create thread that looks for the camera
-        self.timer = QtCore.QTimer()
-        self.timer.setInterval(500)
-        #self.timer.timeout.connect(self.scan_for_camera)
-        #self.timer.start()
-
         # Create a second thread and tie searching for files to that thread
-        self.move_photos_thread = QtCore.QThread()
-        self.file_selection.moveToThread(self.move_photos_thread)
+        #self.move_photos_thread = QtCore.QThread()
+        #self.file_selection.moveToThread(self.move_photos_thread)
 
-        # Connect signals and slots
-        #self.search_for_files_thread.started.connect(self.file_selection.move_copy_files)
-        #self.file_selection.finished.connect(self.photo_mover_finished)
-        #self.file_selection.status_changed.connect(self.photo_status_changed)
-
-    def dragEnterEvent(self, e):
-        e.accept()
-
-    def dropEvent(self, e):
-        pos = e.pos()
-        widget = e.source()
-
-        print(f"pos: {pos}")
-        print(f"self.column_selection_grp.mapFrom(self, pos): {self.column_selection_grp.mapFrom(self, pos)}")
-        print(f"self.unselected_items_grp.geometry(): {self.unselected_items_grp.geometry()}")
-
-        for grp, lbl in [(self.unselected_items_grp, "Unselected items"), 
-                         (self.selected_items_grp,   "Selected items"  )  ]:
-            if grp.geometry().contains(self.column_selection_grp.mapFrom(self, pos)):
-                print(f"Drop target in {lbl}")
-            else:
-                print(f"Drop target not in {lbl}")
-
-        for grp, lyt in [(self.unselected_items_grp, self.unselected_items_lyt), 
-                         (self.selected_items_grp,   self.selected_items_lyt  )  ]:
-            local_pos = self.column_selection_grp.mapFrom(self, pos)
-            if grp.geometry().contains(local_pos):
-                # Drop position is in the group box containing the layout
-                target_index = 0
-                for n in range(lyt.count()):
-                    target_widget = lyt.itemAt(n).widget()
-
-                    if target_widget:
-                        if local_pos.x()>target_widget.x()+target_widget.width():
-                            print(f"After {n}")
-                            target_index = n
-                        else:
-                            print(f"Before {n}")
-
-                print(f"Target location {target_index}")
-                lyt.insertWidget(target_index, widget)
-                e.accept()
-                return
 
     def select_root_file(self):
+        """Event triggered when root file is selected"""
         initial_directory = self.root_dir_combo.currentText()
-        self.settings.root_directory = QtWidgets.QFileDialog.getExistingDirectory(self, 'Select root directory', initial_directory )
+        self.settings.root_directory = QtWidgets.QFileDialog.getExistingDirectory(self,
+            'Select root directory', initial_directory )
         self.root_dir_combo.addItem(self.settings.root_directory)
         self.root_dir_combo.setCurrentIndex (self.root_dir_combo.count()-1)
 
         self.settings.save()
 
-    def root_directory_index_changed(self, index):
+    def root_directory_index_changed(self):
+        """Event triggered when index of root file is changed"""
         self.settings.root_directory = self.root_dir_combo.currentText()
         self.settings.save()
 
-    def root_directory_text_changed(self, newText):
-        self.settings.root_directory = newText
+    def root_directory_text_changed(self, new_text):
+        """Event triggered when text of the root file is changed"""
+        self.settings.root_directory = new_text
         self.settings.save()
 
-    def filter_extension_changed(self, newText):
-        self.settings.filter_extension = newText
+    def filter_extension_changed(self, new_text):
+        """Event triggered when file extension is changed"""
+        self.settings.filter_extension = new_text
         self.settings.save()
 
-    def filename_contains_changed(self, newText):
-        self.settings.filter_filename = newText
+    def filename_contains_changed(self, new_text):
+        """Event triggered when filename contains field is changed"""
+        self.settings.filter_filename = new_text
         self.settings.save()
 
     def search_files(self):
         """Search files and directories"""
-        logging.info(f'get_list_of_photos_from_camera called for {self.settings.root_directory}')
- 
+
         if not Path(self.settings.root_directory).is_dir():
-            logging.info(f'{self.settings.root_directory} not found')
+            logging.info('%s not found', self.settings.root_directory)
             return
 
-        self.file_selection.select_files(self.settings.root_directory, 
-                                         self.settings.filter_extension, 
+        self.file_selection.select_files(self.settings.root_directory,
+                                         self.settings.filter_extension,
                                          self.settings.filter_filename)
 
         self.update_treeview()
-        
+
     def clear_treeview(self):
+        """Clear the tree view"""
         logging.info('clear_treeview called')
         self.model.clear()
         self.file_items = {}
         self.model.setColumnCount(1)
         self.model.setHorizontalHeaderLabels(['File'])
-        
 
         # self.directory_tree is a dictionary of lists
         # Name of the key is directory name
-        # The first element of each list is a QtGui.QStandardItem object in the model tree, rooted in self.model.invisibleRootItem()
+        # The first element of each list is a QtGui.QStandardItem object in the model tree,
+        # rooted in self.model.invisibleRootItem()
         # The second element in each list is a recursive dictionary of lists
         self.directory_tree = {}
 
@@ -286,20 +230,23 @@ class Window(QtWidgets.QMainWindow):
 
         self.clear_treeview()
 
+        # Only enable clipboard button if file list is not empty
+        self.report_btn.setEnabled( len(self.file_selection.selected_files)>0 )
+
         # Skip if no files were found
         if len(self.file_selection.selected_files)==0:
-            self.report_btn.setEnabled(False)
-            #self.result_label.setText("No files were found")
             # Todo: perhaps fire a dialog
             return
-        
+
+        # Only create directory entries
         for selected_file in self.file_selection.selected_files:
 
             direct_parent = self.model.invisibleRootItem()
-            place_in_directory_tree = self.directory_tree 
+            place_in_directory_tree = self.directory_tree
 
             # Go over path step by step
             for parent in selected_file.parents:
+
                 # Create new dir if needed
                 if str(parent) not in place_in_directory_tree.keys():
                     subdirectory = QtGui.QStandardItem(app_icon('icon_folder.svg'), str(parent))
@@ -308,31 +255,32 @@ class Window(QtWidgets.QMainWindow):
                     subdirectory.setFont(font)
                     direct_parent.appendRow([subdirectory])
                     place_in_directory_tree[str(parent)] = [subdirectory, {}]
-                    logging.info(f"Adding directory {str(parent)}")
+                    logging.info("Adding directory %s", str(parent) )
 
                 # Link to new location in the path
                 direct_parent, place_in_directory_tree = place_in_directory_tree[str(parent)]
 
-            self.file_items[selected_file.identifier] = File_Item(selected_file)
-            logging.info(f"Adding file {selected_file.entry.name}")
+        # Add files to the drectories that were created in the previous step
+        for selected_file in self.file_selection.selected_files:
+
+            direct_parent = self.model.invisibleRootItem()
+            place_in_directory_tree = self.directory_tree
+
+            # Go over path step by step and lookup the parent of the file to be added
+            for parent in selected_file.parents:
+                direct_parent, place_in_directory_tree = place_in_directory_tree[str(parent)]
+
+            self.file_items[selected_file.identifier] = FileItem(selected_file)
+            logging.info("Adding file %s", selected_file.entry.name)
 
             direct_parent.appendRow([self.file_items[selected_file.identifier] ])
 
         self.tree_view.expandAll()
         self.tree_view.header().hide()
-        #self.tree_view.setColumnWidth(0, 300)
 
-        self.report_btn.setEnabled(True)
-
-        # Skip any further activity if nothing can be done
-        #if something_to_do:
-            #self.move_photos_action.setEnabled(True)
-            #self.copy_photos_action.setEnabled(True)
-            #self.set_status(f"{len(self.file_selection.selected_files)} photos found")
-        #else:
-            #self.set_status("No action required")
 
     def copy_report_to_clipboard(self):
+        """Copy the files found to the clipboard"""
         logging.info('create_report called')
         dlg = SelectReportFields(self, self.settings.report_columns)
         if dlg.exec()==QtWidgets.QDialog.Accepted:
@@ -348,13 +296,13 @@ if __name__ == '__main__':
     parser.add_argument("--settings", help="Specifies which settings file to use on this computer")
     args = parser.parse_args()
 
-    settings_file = "settings.json"
+    SETTINGS_FILE = "settings.json"
     if args.settings:
-        settings_file = args.settings
-        print(f"Using settings file {settings_file}")
+        SETTINGS_FILE = args.settings
+        print(f"Using settings file {SETTINGS_FILE}")
 
     app = QtWidgets.QApplication(sys.argv)
-    window = Window(settings_file = settings_file)
+    window = Window(filename_settings = SETTINGS_FILE)
     #stylesheet = """color: white;
     #                background-color: #202020"""
     #window.setStyleSheet(stylesheet)

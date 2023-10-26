@@ -4,14 +4,18 @@ This is a Python script with GUI to search for files and copy results to the cli
 This script is written on a Windows system, but should work on other operating systems.
 
 Libraries used by the script that must be installed:
-* PyQt5
-* Pyperclip
+* PyQt5 - https://www.riverbankcomputing.com/software/pyqt/
+* Pyperclip - https://github.com/asweigart/pyperclip
+* Exifread - https://github.com/ianare/exif-py
+* PIL - https://python-pillow.org/
 
 These libraries can be installed from the command line by using:
 
 ```
 python -m pip install pyqt5
 python -m pip install pyperclip
+python -m pip install exifread
+python -m pip install pillow
 ```
 
 Or by using a package manager.

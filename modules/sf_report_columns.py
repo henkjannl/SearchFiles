@@ -1,13 +1,24 @@
+"""This module defines a dialog box class that allows the user to define columns to
+be included in the report, and drag them in the right order"""
+
+import logging
 from PyQt5 import QtCore, QtWidgets
-from modules.sf_utilities import *
+import modules.sf_constants as const
+from modules.sf_utilities import app_icon
 
 class SelectReportFields(QtWidgets.QDialog):
-    def __init__(self, parent=None, list_of_columns = [('Path', True), ('Filename', True), ('Filesize', False), ('Path+Filename', False), ('CreateDate', False)]):
+    """Dialog box that allows the user to define columns to
+    be included in the report, and drag them in the right order"""
+
+    def __init__(self, parent=None, list_of_columns = None ):
         super().__init__(parent)
         self.setModal(True)
 
         # Return result
-        self.list_of_columns = list_of_columns
+        if list_of_columns is None:
+            self.list_of_columns = const.DEFAULT_COLUMNS
+        else:
+            self.list_of_columns = list_of_columns
 
         # Create window
         self.setWindowTitle("Select columns")
@@ -17,7 +28,8 @@ class SelectReportFields(QtWidgets.QDialog):
         # Create a vertical layout with status
         main_layout = QtWidgets.QVBoxLayout()
 
-        label = QtWidgets.QLabel(text="Select columns to display. Drag the columns to modify the order")
+        label = QtWidgets.QLabel(text="Select columns to display."
+                                 "Drag the columns to modify the order")
         main_layout.addWidget(label)
 
         # List of selectable fields
@@ -34,13 +46,13 @@ class SelectReportFields(QtWidgets.QDialog):
         # Horizontal layout with buttons
         button_layout = QtWidgets.QHBoxLayout()
         button_layout.addStretch()
-        self.btn_OK = QtWidgets.QPushButton('OK', self)
-        self.btn_OK.setDefault(True)
-        self.btn_OK.clicked.connect(self.accept)
-        button_layout.addWidget(self.btn_OK)
-        self.btn_Cancel = QtWidgets.QPushButton('Cancel', self)
-        self.btn_Cancel.clicked.connect(self.reject)
-        button_layout.addWidget(self.btn_Cancel)
+        self.btn_confirm = QtWidgets.QPushButton('OK', self)
+        self.btn_confirm.setDefault(True)
+        self.btn_confirm.clicked.connect(self.accept)
+        button_layout.addWidget(self.btn_confirm)
+        self.btn_cancel = QtWidgets.QPushButton('Cancel', self)
+        self.btn_cancel.clicked.connect(self.reject)
+        button_layout.addWidget(self.btn_cancel)
 
         main_layout.addLayout(button_layout)
 
@@ -48,11 +60,15 @@ class SelectReportFields(QtWidgets.QDialog):
         self.setLayout(main_layout)
 
     def result(self):
+        """Returning the columns from the dialog"""
         # Depending on calling the accept member, the original list or the modified list is returned
         return self.list_of_columns
-    
+
     def accept(self):
+        """Triggered when the user clicks OK"""
         # Overwrite the initial list of selected and unselected items
         logging.info("Accepted")
-        self.list_of_columns = [ ( self.fields_list.item(row).text(), (self.fields_list.item(row).checkState() == QtCore.Qt.Checked) ) for row in range(self.fields_list.count()) ]
+        self.list_of_columns = [ ( self.fields_list.item(row).text(), 
+                (self.fields_list.item(row).checkState() == QtCore.Qt.Checked) ) 
+                for row in range(self.fields_list.count()) ]
         super().accept()

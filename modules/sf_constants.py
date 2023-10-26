@@ -1,6 +1,7 @@
+"""Constants used in various places"""
 
 # Constants
-# Keywords in the settings file (json) 
+# Keywords in the settings file (json)
 SETTINGS_VERSION            = "Version"
 SETTINGS_ROOT_DIRECTORY     = "RootDir"
 SETTINGS_RECENT_DIRECTORIES = "RecentDirectories"
@@ -22,3 +23,18 @@ COL_IMAGE_TAKEN_DATE  = 'Image taken date'
 COL_IMAGE_WIDTH       = 'Image width'
 COL_IMAGE_HEIGHT      = 'Image height'
 
+# Default columns
+DEFAULT_COLUMNS = [
+    (COL_PATH              , True   ),
+    (COL_FILE_NAME         , True   ),
+    (COL_FILE_SIZE         , True   ),
+    (COL_CREATE_DATE       , False  ),
+    (COL_MODIFIED_DATE     , False  ),
+    (COL_ACCESSED_DATE     , False  ),
+    (COL_IMAGE_TAKEN_DATE  , False  ),
+    (COL_IMAGE_WIDTH       , False  ),
+    (COL_IMAGE_HEIGHT      , False  ),
+    (COL_PATH_AND_NAME     , False  ) ]
+
+# Date format used for files
+DATE_FMT = '%Y-%m-%d %H:%M:%S'
