@@ -93,7 +93,12 @@ class SelectedFile(QtCore.QObject):
             return "Invalid field"
 
 class FileSelection(QtCore.QObject):
-    """Creates list of photos on camera and function that moves them to harddisk"""
+    """Creates list of files as a result of the search
+       By subclassing the list from QObject, 
+       the search can be moved to a separate thread"""
+    
+    finished = QtCore.pyqtSignal()
+    progress = QtCore.pyqtSignal(int)
 
     def __init__(self):
         """Initialize the the file selection list object
@@ -101,28 +106,34 @@ class FileSelection(QtCore.QObject):
         If a file in the list is directly displayed in the GUI, a multithreading problem occurs"""
         super().__init__(None)
         self.root_directory = ''
-        self.unique_identifier = 0
         self.filter_extension = ''
         self.filter_filename = ''
-        self.selected_files = {}
-
-    def select_files(self, root_directory, filter_extension, filter_filename):
-        """Look in various places for the camera and search for suitable files"""
         self.unique_identifier = 0
         self.selected_files = []
+
+    def new_search(self):
+        self.unique_identifier = 0
+        self.selected_files = []
+
+    def select_files(self, root_directory, filter_extension, filter_filename):
+        """Set search variables"""
         self.root_directory = Path(root_directory)
         self.filter_extension = filter_extension
         self.filter_filename = filter_filename
-        logging.info("select_files called for %s containing %s with extension %s",
-                     root_directory, filter_filename, filter_extension)
+        self.new_search()
 
-        self.__add_to_selection__( Path(root_directory) )
+    def run(self):
+        """Start search progress in separate thread"""
+        logging.info("Starting search")
+        self.new_search()
+        self.__add_to_selection__( Path(self.root_directory) )
 
         # Sort files, directories first, then sort on filename
         self.selected_files.sort( key= lambda selected_file:
             (selected_file.entry.is_dir(), str(selected_file.full_path() ) ) )
 
-        logging.info("%d photo's found", len(self.selected_files) )
+        logging.info("%d files found", len(self.selected_files) )
+        self.finished.emit()
 
     def requirement(self, entry):
         """Filter the files that were found
@@ -154,6 +165,8 @@ class FileSelection(QtCore.QObject):
                 selected_file = SelectedFile(self.unique_identifier, self.root_directory, entry)
                 self.selected_files.append(selected_file)
                 self.unique_identifier+=1
+                if self.unique_identifier % 100 == 0:
+                    self.progress.emit( len(self.selected_files) )
 
             if entry.is_dir():
                 # Recursively search subdirectories

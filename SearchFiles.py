@@ -5,11 +5,10 @@
 - copies data to clipboard
 
 To do:
-- repeat linting
+- add status bar with relevant info
 - search tree:
     - collapse / expand all with right mouse button
 - segment window __init__ code in smaller functions
-- parallel thread to search files, with dialog that can cancel the search
 - confirmation message that the files are copied to the clipboard
 - first find out if this is a good idea:
     - class Selected_File() can inherit from both QtCore.QObject and
@@ -23,9 +22,11 @@ import argparse
 import sys
 import logging
 from pathlib import Path
+from copy import copy
 
 from PyQt5 import QtGui, QtCore, QtWidgets
 
+from modules.sf_search_progress import SearchProgress
 from modules.sf_settings import Settings
 from modules.sf_report_columns import SelectReportFields
 from modules.sf_utilities import app_icon
@@ -161,11 +162,6 @@ class Window(QtWidgets.QMainWindow):
         widget.setLayout(main_layout)
         self.setCentralWidget(widget)
 
-        # Create a second thread and tie searching for files to that thread
-        #self.move_photos_thread = QtCore.QThread()
-        #self.file_selection.moveToThread(self.move_photos_thread)
-
-
     def select_root_file(self):
         """Event triggered when root file is selected"""
         initial_directory = self.root_dir_combo.currentText()
@@ -184,7 +180,8 @@ class Window(QtWidgets.QMainWindow):
     def root_directory_text_changed(self, new_text):
         """Event triggered when text of the root file is changed"""
         self.settings.root_directory = new_text
-        self.settings.save()
+        # Do not call settings.save since this will 
+        # increase number of recent finds for each character
 
     def filter_extension_changed(self, new_text):
         """Event triggered when file extension is changed"""
@@ -206,8 +203,16 @@ class Window(QtWidgets.QMainWindow):
         self.file_selection.select_files(self.settings.root_directory,
                                          self.settings.filter_extension,
                                          self.settings.filter_filename)
+        
+        dlg = SearchProgress(self, self.file_selection)
+        if dlg.exec()==QtWidgets.QDialog.Accepted:
+            self.file_selection.selected_files = list(dlg.result())
+        else:
+            self.file_selection.new_search()
 
         self.update_treeview()
+
+        logging.info("End of search_files function")
 
     def clear_treeview(self):
         """Clear the tree view"""
@@ -239,6 +244,7 @@ class Window(QtWidgets.QMainWindow):
             return
 
         # Only create directory entries
+        logging.info("Creating directories")
         for selected_file in self.file_selection.selected_files:
 
             direct_parent = self.model.invisibleRootItem()
@@ -255,12 +261,12 @@ class Window(QtWidgets.QMainWindow):
                     subdirectory.setFont(font)
                     direct_parent.appendRow([subdirectory])
                     place_in_directory_tree[str(parent)] = [subdirectory, {}]
-                    logging.info("Adding directory %s", str(parent) )
 
                 # Link to new location in the path
                 direct_parent, place_in_directory_tree = place_in_directory_tree[str(parent)]
 
         # Add files to the drectories that were created in the previous step
+        logging.info("Adding files to directories")
         for selected_file in self.file_selection.selected_files:
 
             direct_parent = self.model.invisibleRootItem()
@@ -271,7 +277,6 @@ class Window(QtWidgets.QMainWindow):
                 direct_parent, place_in_directory_tree = place_in_directory_tree[str(parent)]
 
             self.file_items[selected_file.identifier] = FileItem(selected_file)
-            logging.info("Adding file %s", selected_file.entry.name)
 
             direct_parent.appendRow([self.file_items[selected_file.identifier] ])
 
