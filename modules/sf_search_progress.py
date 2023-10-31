@@ -2,7 +2,6 @@
 
 import logging
 from PyQt5 import QtCore, QtWidgets
-import modules.sf_constants as const
 from modules.sf_file_selection import FileSelection
 from modules.sf_utilities import app_icon
 
@@ -95,7 +94,8 @@ class SearchProgress(QtWidgets.QDialog):
         logging.info("Search is interrupted by the user")
 
         # Stop the thread
-        #self.search_files_thread.quit()
+        self.new_search.continue_execution = False
+        #self.search_files_thread.exit()
 
         # Clear the result list
         self.new_search.selected_files = []

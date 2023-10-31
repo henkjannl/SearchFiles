@@ -68,7 +68,7 @@ class SelectReportFields(QtWidgets.QDialog):
         """Triggered when the user clicks OK"""
         # Overwrite the initial list of selected and unselected items
         logging.info("Accepted")
-        self.list_of_columns = [ ( self.fields_list.item(row).text(), 
-                (self.fields_list.item(row).checkState() == QtCore.Qt.Checked) ) 
-                for row in range(self.fields_list.count()) ]
+        self.list_of_columns =  [ [self.fields_list.item(row).text(), self.fields_list.item(row).checkState() == QtCore.Qt.Checked] 
+                                 for row in range(self.fields_list.count())]
+        logging.info(self.list_of_columns)
         super().accept()

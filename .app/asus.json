@@ -1,7 +1,8 @@
 {
     "Version": 1,
-    "RootDir": "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\05 Taal",
+    "RootDir": "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\18 FreeCad",
     "RecentDirectories": [
+        "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\18 FreeCad",
         "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\05 Taal",
         ".",
         "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python",
@@ -10,7 +11,7 @@
     ],
     "FilterExtension": "",
     "RecentExtensions": [
-        "p",
+        "FCStd",
         "",
         "docx",
         "xlsx",
@@ -30,13 +31,6 @@
     ],
     "FilterFilename": "",
     "RecentFilenames": [
-        "yt",
-        "y",
-        "a",
-        "o",
-        "del",
-        "de",
-        "d",
         ""
     ],
     "ReportColumns": [
@@ -50,11 +44,11 @@
         ],
         [
             "File size",
-            false
+            true
         ],
         [
             "Path and filename",
-            true
+            false
         ],
         [
             "Create date",

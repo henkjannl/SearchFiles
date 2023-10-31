@@ -1,126 +1,15 @@
-[sf_settings.py 061] load_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
-[SearchFiles.py 220] clear_treeview called
-[sf_search_progress.py 061] Dialog initialized, creating thread
-[sf_search_progress.py 074] Thread should be started
-[sf_file_selection.py 127] Starting search
-[sf_file_selection.py 135] 367 files found
-[sf_search_progress.py 078] Search completed
-[SearchFiles.py 235] update_treeview called
-[SearchFiles.py 220] clear_treeview called
-[SearchFiles.py 248] Creating directories
-[SearchFiles.py 270] Adding files to directories
-[SearchFiles.py 216] End of search_files function
-[sf_search_progress.py 061] Dialog initialized, creating thread
-[sf_search_progress.py 074] Thread should be started
-[sf_file_selection.py 127] Starting search
-[sf_file_selection.py 135] 367 files found
-[sf_search_progress.py 078] Search completed
-[SearchFiles.py 235] update_treeview called
-[SearchFiles.py 220] clear_treeview called
-[SearchFiles.py 248] Creating directories
-[SearchFiles.py 270] Adding files to directories
-[SearchFiles.py 216] End of search_files function
-[sf_settings.py 093] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
-[sf_settings.py 093] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
-[sf_search_progress.py 061] Dialog initialized, creating thread
-[sf_search_progress.py 074] Thread should be started
-[sf_file_selection.py 127] Starting search
-[sf_file_selection.py 135] 23 files found
-[sf_search_progress.py 078] Search completed
-[SearchFiles.py 235] update_treeview called
-[SearchFiles.py 220] clear_treeview called
-[SearchFiles.py 248] Creating directories
-[SearchFiles.py 270] Adding files to directories
-[SearchFiles.py 216] End of search_files function
-[SearchFiles.py 290] create_report called
-[sf_report_columns.py 070] Accepted
-[SearchFiles.py 294] [('Path', True), ('Filename', True), ('File size', True), ('Create date', False), ('Modified date', False), ('Accessed date', False), ('Image taken date', True), ('Image width', True), ('Image height', True), ('Path and filename', True)]
-[Image.py 379] Importing BlpImagePlugin
-[Image.py 379] Importing BmpImagePlugin
-[Image.py 379] Importing BufrStubImagePlugin
-[Image.py 379] Importing CurImagePlugin
-[Image.py 379] Importing DcxImagePlugin
-[Image.py 379] Importing DdsImagePlugin
-[Image.py 379] Importing EpsImagePlugin
-[Image.py 379] Importing FitsImagePlugin
-[Image.py 379] Importing FitsStubImagePlugin
-[Image.py 379] Importing FliImagePlugin
-[Image.py 379] Importing FpxImagePlugin
-[Image.py 382] Image: failed to import FpxImagePlugin: No module named 'olefile'
-[Image.py 379] Importing FtexImagePlugin
-[Image.py 379] Importing GbrImagePlugin
-[Image.py 379] Importing GifImagePlugin
-[Image.py 379] Importing GribStubImagePlugin
-[Image.py 379] Importing Hdf5StubImagePlugin
-[Image.py 379] Importing IcnsImagePlugin
-[Image.py 379] Importing IcoImagePlugin
-[Image.py 379] Importing ImImagePlugin
-[Image.py 379] Importing ImtImagePlugin
-[Image.py 379] Importing IptcImagePlugin
-[Image.py 379] Importing JpegImagePlugin
-[Image.py 379] Importing Jpeg2KImagePlugin
-[Image.py 379] Importing McIdasImagePlugin
-[Image.py 379] Importing MicImagePlugin
-[Image.py 382] Image: failed to import MicImagePlugin: No module named 'olefile'
-[Image.py 379] Importing MpegImagePlugin
-[Image.py 379] Importing MpoImagePlugin
-[Image.py 379] Importing MspImagePlugin
-[Image.py 379] Importing PalmImagePlugin
-[Image.py 379] Importing PcdImagePlugin
-[Image.py 379] Importing PcxImagePlugin
-[Image.py 379] Importing PdfImagePlugin
-[Image.py 379] Importing PixarImagePlugin
-[Image.py 379] Importing PngImagePlugin
-[Image.py 379] Importing PpmImagePlugin
-[Image.py 379] Importing PsdImagePlugin
-[Image.py 379] Importing SgiImagePlugin
-[Image.py 379] Importing SpiderImagePlugin
-[Image.py 379] Importing SunImagePlugin
-[Image.py 379] Importing TgaImagePlugin
-[Image.py 379] Importing TiffImagePlugin
-[Image.py 379] Importing WebPImagePlugin
-[Image.py 379] Importing WmfImagePlugin
-[Image.py 379] Importing XbmImagePlugin
-[Image.py 379] Importing XpmImagePlugin
-[Image.py 379] Importing XVThumbImagePlugin
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\LogicPic.pdf
-[sf_utilities.py 060] PIL error cannot identify image file 'C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic\\LogicPic.pdf'
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\LogicPic.svg
-[sf_utilities.py 060] PIL error cannot identify image file 'C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic\\LogicPic.svg'
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\Screenshot_20181022-204401.jpg
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\Screenshot_20181023-084823.jpg
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\Screenshot_20181024-210111.jpg
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\Screenshot_20181029-134620.jpg
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\Screenshot_20181030-214706.jpg
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\Screenshot_20181107-125738.jpg
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\RC\Animals - level 32.py
-[sf_utilities.py 060] PIL error cannot identify image file 'C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic\\RC\\Animals - level 32.py'
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\RC\LogicPic.py
-[sf_utilities.py 060] PIL error cannot identify image file 'C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic\\RC\\LogicPic.py'
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\V1\LogicPic.py
-[sf_utilities.py 060] PIL error cannot identify image file 'C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic\\V1\\LogicPic.py'
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\V2\LogicPic.py
-[sf_utilities.py 060] PIL error cannot identify image file 'C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic\\V2\\LogicPic.py'
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\V3\LogicPic.py
-[sf_utilities.py 060] PIL error cannot identify image file 'C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic\\V3\\LogicPic.py'
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\V4\LogicPic.py
-[sf_utilities.py 060] PIL error cannot identify image file 'C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic\\V4\\LogicPic.py'
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\V5\LogicPic.py
-[sf_utilities.py 060] PIL error cannot identify image file 'C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic\\V5\\LogicPic.py'
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\RC\School - level 08.py
-[sf_utilities.py 060] PIL error cannot identify image file 'C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic\\RC\\School - level 08.py'
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\RC\School - level 09.py
-[sf_utilities.py 060] PIL error cannot identify image file 'C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic\\RC\\School - level 09.py'
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\RC\School - level 19.py
-[sf_utilities.py 060] PIL error cannot identify image file 'C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic\\RC\\School - level 19.py'
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\RC\School - level 21.py
-[sf_utilities.py 060] PIL error cannot identify image file 'C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic\\RC\\School - level 21.py'
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\RC\School - level 28.py
-[sf_utilities.py 060] PIL error cannot identify image file 'C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic\\RC\\School - level 28.py'
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\RC\Small things - level 02.py
-[sf_utilities.py 060] PIL error cannot identify image file 'C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic\\RC\\Small things - level 02.py'
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\RC\Small things - level 27.py
-[sf_utilities.py 060] PIL error cannot identify image file 'C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic\\RC\\Small things - level 27.py'
-[sf_utilities.py 054] image_size called for C:\Users\henkj\OneDrive\03 HenkJan\09 Python\30 Spelletjes en puzzeltjes\LogicPic\RC\__pycache__\LogicPic.cpython-36.pyc
-[sf_utilities.py 060] PIL error cannot identify image file 'C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic\\RC\\__pycache__\\LogicPic.cpython-36.pyc'
-[sf_settings.py 093] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
+[sf_settings.py 070] load_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
+[sf_settings.py 046] Checking self.report_columns
+[sf_settings.py 053] [['Path', True], ['Filename', True], ['File size', True], ['Extension', False], ['Create date', True], ['Modified date', True], ['Accessed date', False], ['Image taken date', False], ['Image width', False], ['Image height', False], ['Path and filename', False]]
+[sf_settings.py 057] Checking Path
+[sf_settings.py 057] Checking Filename
+[sf_settings.py 057] Checking File size
+[sf_settings.py 057] Checking Extension
+[sf_settings.py 057] Checking Create date
+[sf_settings.py 057] Checking Modified date
+[sf_settings.py 057] Checking Accessed date
+[sf_settings.py 057] Checking Image taken date
+[sf_settings.py 057] Checking Image width
+[sf_settings.py 057] Checking Image height
+[sf_settings.py 057] Checking Path and filename
+[SearchFiles.py 221] clear_treeview called

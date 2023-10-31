@@ -14,6 +14,7 @@ SETTINGS_REPORT_COLUMNS     = "ReportColumns"
 # Column names in the report
 COL_PATH              = 'Path'
 COL_FILE_NAME         = 'Filename'
+COL_FILE_EXTENSION    = 'Extension'
 COL_FILE_SIZE         = 'File size'
 COL_PATH_AND_NAME     = 'Path and filename'
 COL_CREATE_DATE       = 'Create date'
@@ -28,6 +29,7 @@ DEFAULT_COLUMNS = [
     (COL_PATH              , True   ),
     (COL_FILE_NAME         , True   ),
     (COL_FILE_SIZE         , True   ),
+    (COL_FILE_EXTENSION    , True   ),
     (COL_CREATE_DATE       , False  ),
     (COL_MODIFIED_DATE     , False  ),
     (COL_ACCESSED_DATE     , False  ),

@@ -200,6 +200,8 @@ class Window(QtWidgets.QMainWindow):
             logging.info('%s not found', self.settings.root_directory)
             return
 
+        self.settings.save()
+
         self.file_selection.select_files(self.settings.root_directory,
                                          self.settings.filter_extension,
                                          self.settings.filter_filename)

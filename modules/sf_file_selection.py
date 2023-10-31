@@ -28,6 +28,10 @@ class SelectedFile(QtCore.QObject):
         self.image_size = None
         self.parents = entry.relative_to(root).parts[:-1]
 
+    def extension(self):
+        """File extension"""
+        return Path(self.entry).suffix[1:]
+    
     def file_size(self):
         """File size of the file"""
         return self.entry.stat().st_size
@@ -73,6 +77,8 @@ class SelectedFile(QtCore.QObject):
             return self.directory()
         elif field==const.COL_FILE_NAME:
             return self.entry.name
+        elif field==const.COL_FILE_EXTENSION:
+            return self.extension()
         elif field==const.COL_FILE_SIZE:
             return self.file_size()
         elif field==const.COL_PATH_AND_NAME:
@@ -110,10 +116,12 @@ class FileSelection(QtCore.QObject):
         self.filter_filename = ''
         self.unique_identifier = 0
         self.selected_files = []
+        self.continue_execution = True
 
     def new_search(self):
         self.unique_identifier = 0
         self.selected_files = []
+        self.continue_execution = True
 
     def select_files(self, root_directory, filter_extension, filter_filename):
         """Set search variables"""
@@ -146,7 +154,8 @@ class FileSelection(QtCore.QObject):
         # Do not select if extension requirement is not met
         # ToDo: compare actual extension, instead of endswith
         # ToDo: ensure filter '' is still selecting all files
-        if not entry.name.lower().endswith(self.filter_extension):
+        if self.filter_extension and Path(entry).suffix[1:] != self.filter_extension:
+            #logging.info("Search declined since [%s] is not [%s]", )
             return False
 
         # Do not select if filename filter requirement is not met
@@ -157,8 +166,12 @@ class FileSelection(QtCore.QObject):
         return True
 
     def __add_to_selection__(self, path):
-        """Recursive function that scans the disk and add relevant files to the selection"""
+        """Recursive function that scans the disk and add relevant files to the selection"""        
         for entry in path.iterdir():
+
+            # Allow the user to interrupt the search
+            if not self.continue_execution:
+                return
 
             if self.requirement(entry):
                 # Add new member to the selected_files list
@@ -174,6 +187,8 @@ class FileSelection(QtCore.QObject):
 
     def copy_report_to_clipboard(self, report_columns):
         """Create a list with only the selected columns in the report"""
+        logging.info('copy_report_to_clipboard:')
+        logging.info(report_columns)
         selected_columns = [text for text, checked in report_columns if checked]
 
         # Sort in different order, shorter paths first

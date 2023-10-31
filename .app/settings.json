@@ -1,21 +1,19 @@
 {
     "Version": 1,
-    "RootDir": "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic",
+    "RootDir": "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\18 FreeCad",
     "RecentDirectories": [
+        "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\18 FreeCad",
         "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic",
         "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\Lonpos",
         "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes",
         "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python",
         "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\Tenten en bomen",
         "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\07 wxPython",
-        "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\04 HTML",
-        "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\04 HTM",
-        "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\04 HT",
-        "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\04 H"
+        "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\04 HTML"
     ],
-    "FilterExtension": "",
+    "FilterExtension": "FCStd",
     "RecentExtensions": [
-        "p",
+        "FCStd",
         "",
         "docx",
         "xlsx",
@@ -35,13 +33,6 @@
     ],
     "FilterFilename": "",
     "RecentFilenames": [
-        "yt",
-        "y",
-        "a",
-        "o",
-        "del",
-        "de",
-        "d",
         ""
     ],
     "ReportColumns": [
@@ -58,12 +49,16 @@
             true
         ],
         [
-            "Create date",
+            "Extension",
             false
         ],
         [
+            "Create date",
+            true
+        ],
+        [
             "Modified date",
-            false
+            true
         ],
         [
             "Accessed date",
@@ -71,19 +66,19 @@
         ],
         [
             "Image taken date",
-            true
+            false
         ],
         [
             "Image width",
-            true
+            false
         ],
         [
             "Image height",
-            true
+            false
         ],
         [
             "Path and filename",
-            true
+            false
         ]
     ]
 }
