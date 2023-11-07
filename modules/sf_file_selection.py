@@ -83,6 +83,8 @@ class SelectedFile(QtCore.QObject):
             return self.file_size()
         elif field==const.COL_PATH_AND_NAME:
             return self.full_path()
+        elif field==const.COL_PATH_DEPTH:
+            return len(self.entry.parents)
         elif field==const.COL_CREATE_DATE:
             return self.created()
         elif field==const.COL_MODIFIED_DATE:
@@ -193,7 +195,7 @@ class FileSelection(QtCore.QObject):
 
         # Sort in different order, shorter paths first
         self.selected_files.sort( key= lambda selected_file:
-                        (len(selected_file.entry.parts), str(selected_file.entry.name.lower() ) ) )
+                        ( str(selected_file.entry.resolve() ), str(selected_file.entry.name.lower() ) ) )
 
         export = [ '\t'.join(selected_columns) ]
 

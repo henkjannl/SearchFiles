@@ -17,6 +17,7 @@ COL_FILE_NAME         = 'Filename'
 COL_FILE_EXTENSION    = 'Extension'
 COL_FILE_SIZE         = 'File size'
 COL_PATH_AND_NAME     = 'Path and filename'
+COL_PATH_DEPTH        = 'Path depth'
 COL_CREATE_DATE       = 'Create date'
 COL_MODIFIED_DATE     = 'Modified date'
 COL_ACCESSED_DATE     = 'Accessed date'
@@ -30,6 +31,7 @@ DEFAULT_COLUMNS = [
     (COL_FILE_NAME         , True   ),
     (COL_FILE_SIZE         , True   ),
     (COL_FILE_EXTENSION    , True   ),
+    (COL_PATH_DEPTH        , False  ),
     (COL_CREATE_DATE       , False  ),
     (COL_MODIFIED_DATE     , False  ),
     (COL_ACCESSED_DATE     , False  ),

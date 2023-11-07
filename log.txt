@@ -5,6 +5,8 @@
 [sf_settings.py 057] Checking Filename
 [sf_settings.py 057] Checking File size
 [sf_settings.py 057] Checking Extension
+[sf_settings.py 057] Checking Path depth
+[sf_settings.py 060]    - Adding Path depth
 [sf_settings.py 057] Checking Create date
 [sf_settings.py 057] Checking Modified date
 [sf_settings.py 057] Checking Accessed date
@@ -13,3 +15,49 @@
 [sf_settings.py 057] Checking Image height
 [sf_settings.py 057] Checking Path and filename
 [SearchFiles.py 221] clear_treeview called
+[sf_settings.py 104] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
+[sf_settings.py 046] Checking self.report_columns
+[sf_settings.py 053] [['Path', True], ['Filename', True], ['File size', True], ['Extension', False], ['Create date', True], ['Modified date', True], ['Accessed date', False], ['Image taken date', False], ['Image width', False], ['Image height', False], ['Path and filename', False], ['Path depth', False]]
+[sf_settings.py 057] Checking Path
+[sf_settings.py 057] Checking Filename
+[sf_settings.py 057] Checking File size
+[sf_settings.py 057] Checking Extension
+[sf_settings.py 057] Checking Path depth
+[sf_settings.py 057] Checking Create date
+[sf_settings.py 057] Checking Modified date
+[sf_settings.py 057] Checking Accessed date
+[sf_settings.py 057] Checking Image taken date
+[sf_settings.py 057] Checking Image width
+[sf_settings.py 057] Checking Image height
+[sf_settings.py 057] Checking Path and filename
+[sf_search_progress.py 060] Dialog initialized, creating thread
+[sf_search_progress.py 073] Thread should be started
+[sf_file_selection.py 137] Starting search
+[sf_file_selection.py 145] 1522 files found
+[sf_search_progress.py 077] Search completed
+[SearchFiles.py 236] update_treeview called
+[SearchFiles.py 221] clear_treeview called
+[SearchFiles.py 249] Creating directories
+[SearchFiles.py 271] Adding files to directories
+[SearchFiles.py 217] End of search_files function
+[SearchFiles.py 291] create_report called
+[sf_report_columns.py 070] Accepted
+[sf_report_columns.py 073] [['Path', True], ['Filename', True], ['File size', False], ['Extension', False], ['Create date', False], ['Modified date', False], ['Accessed date', False], ['Image taken date', False], ['Image width', False], ['Image height', False], ['Path and filename', False], ['Path depth', True]]
+[SearchFiles.py 295] [['Path', True], ['Filename', True], ['File size', False], ['Extension', False], ['Create date', False], ['Modified date', False], ['Accessed date', False], ['Image taken date', False], ['Image width', False], ['Image height', False], ['Path and filename', False], ['Path depth', True]]
+[sf_file_selection.py 192] copy_report_to_clipboard:
+[sf_file_selection.py 193] [['Path', True], ['Filename', True], ['File size', False], ['Extension', False], ['Create date', False], ['Modified date', False], ['Accessed date', False], ['Image taken date', False], ['Image width', False], ['Image height', False], ['Path and filename', False], ['Path depth', True]]
+[sf_settings.py 104] save_settings called for c:\Users\henkj\IOT\SearchFiles\.app\settings.json
+[sf_settings.py 046] Checking self.report_columns
+[sf_settings.py 053] [['Path', True], ['Filename', True], ['File size', False], ['Extension', False], ['Create date', False], ['Modified date', False], ['Accessed date', False], ['Image taken date', False], ['Image width', False], ['Image height', False], ['Path and filename', False], ['Path depth', True]]
+[sf_settings.py 057] Checking Path
+[sf_settings.py 057] Checking Filename
+[sf_settings.py 057] Checking File size
+[sf_settings.py 057] Checking Extension
+[sf_settings.py 057] Checking Path depth
+[sf_settings.py 057] Checking Create date
+[sf_settings.py 057] Checking Modified date
+[sf_settings.py 057] Checking Accessed date
+[sf_settings.py 057] Checking Image taken date
+[sf_settings.py 057] Checking Image width
+[sf_settings.py 057] Checking Image height
+[sf_settings.py 057] Checking Path and filename

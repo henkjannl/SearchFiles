@@ -9,7 +9,7 @@
         "C:\\Users\\henkj\\Downloads",
         "C:\\Users\\henkj\\Downloads\\Subdirectory"
     ],
-    "FilterExtension": "",
+    "FilterExtension": "FCStd",
     "RecentExtensions": [
         "FCStd",
         "",
@@ -44,7 +44,7 @@
         ],
         [
             "File size",
-            true
+            false
         ],
         [
             "Path and filename",
@@ -72,6 +72,10 @@
         ],
         [
             "Image height",
+            false
+        ],
+        [
+            "Extension",
             false
         ]
     ]

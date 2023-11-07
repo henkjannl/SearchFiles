@@ -46,7 +46,7 @@
         ],
         [
             "File size",
-            true
+            false
         ],
         [
             "Extension",
@@ -54,11 +54,11 @@
         ],
         [
             "Create date",
-            true
+            false
         ],
         [
             "Modified date",
-            true
+            false
         ],
         [
             "Accessed date",
@@ -79,6 +79,10 @@
         [
             "Path and filename",
             false
+        ],
+        [
+            "Path depth",
+            true
         ]
     ]
 }
