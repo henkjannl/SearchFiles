@@ -1,21 +1,15 @@
 {
     "Version": 1,
-    "RootDir": "C:\\Users\\hj.vanderpol\\OneDrive\\03 HenkJan\\18 FreeCad\\_Bond",
+    "RootDir": "C:\\Users\\hj.vanderpol\\Nextcloud-Bond3D\\Patents",
     "RecentDirectories": [
-        "C:\\Users\\hj.vanderpol\\OneDrive\\03 HenkJan\\18 FreeCad\\_Bond",
-        "C:\\Users\\hj.vanderpol\\OneDrive\\03 HenkJan\\18 FreeCad",
-        ".",
-        "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\18 FreeCad",
-        "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\LogicPic",
-        "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\Lonpos",
-        "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes",
-        "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python",
-        "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\30 Spelletjes en puzzeltjes\\Tenten en bomen",
-        "C:\\Users\\henkj\\OneDrive\\03 HenkJan\\09 Python\\07 wxPython"
+        "C:\\Users\\hj.vanderpol\\Nextcloud-Bond3D\\Patents",
+        "C:\\Users\\hj.vanderpol\\Nextcloud-Bond3D\\Pictures",
+        "C:\\Users\\hj.vanderpol\\Downloads"
     ],
-    "FilterExtension": "FCStd",
+    "FilterExtension": "",
     "RecentExtensions": [
-        "FCStd",
+        "s",
+        "sv",
         "",
         "docx",
         "xlsx",
@@ -26,6 +20,7 @@
         "csv",
         "py",
         "svg",
+        "FCStd",
         "png",
         "jpg",
         "jpeg",
@@ -33,16 +28,16 @@
         "txt",
         "zip"
     ],
-    "FilterFilename": "",
-    "FilenameCaseSensitive": true,
+    "FilterFilename": "Kumovis",
     "RecentFilenames": [
-        "femoral",
-        "femora",
-        "femor",
-        "femo",
-        "fem",
-        "fe",
-        "f",
+        "Kumovis",
+        "kumovis",
+        "kumovi",
+        "kumov",
+        "kumo",
+        "kum",
+        "ku",
+        "k",
         ""
     ],
     "ReportColumns": [
@@ -60,6 +55,10 @@
         ],
         [
             "Extension",
+            false
+        ],
+        [
+            "Path depth",
             false
         ],
         [
@@ -89,10 +88,6 @@
         [
             "Path and filename",
             false
-        ],
-        [
-            "Path depth",
-            true
         ]
     ]
 }

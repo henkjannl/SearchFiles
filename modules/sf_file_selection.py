@@ -116,6 +116,7 @@ class FileSelection(QtCore.QObject):
         self.root_directory = ''
         self.filter_extension = ''
         self.filter_filename = ''
+        self.filename_case_sensitive = False
         self.unique_identifier = 0
         self.selected_files = []
         self.continue_execution = True
@@ -125,17 +126,19 @@ class FileSelection(QtCore.QObject):
         self.selected_files = []
         self.continue_execution = True
 
-    def select_files(self, root_directory, filter_extension, filter_filename):
+    def select_files(self, root_directory, filter_extension, filter_filename, filename_case_sensitive):
         """Set search variables"""
         self.root_directory = Path(root_directory)
         self.filter_extension = filter_extension
         self.filter_filename = filter_filename
+        self.filename_case_sensitive = filename_case_sensitive
         self.new_search()
 
     def run(self):
         """Start search progress in separate thread"""
         logging.info("Starting search")
         self.new_search()
+
         self.__add_to_selection__( Path(self.root_directory) )
 
         # Sort files, directories first, then sort on filename
@@ -161,8 +164,12 @@ class FileSelection(QtCore.QObject):
             return False
 
         # Do not select if filename filter requirement is not met
-        if not self.filter_filename.lower() in entry.name.lower():
-            return False
+        if self.filename_case_sensitive:
+            if not self.filter_filename in entry.name:
+                return False
+        else:
+            if not self.filter_filename.lower() in entry.name.lower():
+                return False
 
         # Select the file
         return True

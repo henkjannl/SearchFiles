@@ -5,6 +5,8 @@
 - copies data to clipboard
 
 To do:
+- resolve why icons don't work on Lenovo computer
+- add 'case sensitive' flag to filename option
 - add status bar with relevant info
 - search tree:
     - collapse / expand all with right mouse button
@@ -22,14 +24,13 @@ import argparse
 import sys
 import logging
 from pathlib import Path
-from copy import copy
 
 from PyQt5 import QtGui, QtCore, QtWidgets
 
 from modules.sf_search_progress import SearchProgress
 from modules.sf_settings import Settings
 from modules.sf_report_columns import SelectReportFields
-from modules.sf_utilities import app_icon
+from modules.sf_utilities import app_icon, app_dir
 from modules.sf_file_selection import FileSelection
 
 logging.basicConfig(stream=open(r'.\log.txt', 'w', encoding='utf-8'),
@@ -42,7 +43,7 @@ class FileItem(QtGui.QStandardItem):
 
     def __init__(self, selected_file):
         """The item in the first column, giving the name of the file"""
-        super().__init__(app_icon("icon_file.svg"), selected_file.entry.name)
+        super().__init__(app_icon("icon_file.ico"), selected_file.entry.name)
 
 
 class Window(QtWidgets.QMainWindow):
@@ -51,15 +52,20 @@ class Window(QtWidgets.QMainWindow):
     def __init__(self, parent=None, filename_settings = "settings.json"):
         super().__init__(parent)
 
+        logging.info("App dir %s", app_dir("file.txt") )
+
         self.root_directory = Path().home()
 
         # Create window
         self.setWindowTitle("Search files on the computer")
-        self.setWindowIcon(app_icon("icon_folder_search.svg"))
+        #self.setWindowIcon(app_icon("icon_folder_search.svg"))
+        self.setWindowIcon(app_icon("icon_search_folder.ico"))
+        
         self.resize(1200, 800)
 
         # Settings
         self.settings = Settings(filename_settings)
+        self.settings.load()
 
         # Object containing selected files
         self.file_selection = FileSelection()
@@ -74,7 +80,8 @@ class Window(QtWidgets.QMainWindow):
         root_dir_layout = QtWidgets.QHBoxLayout()
 
         # Button to open file dialog
-        icon_folder = app_icon('icon_folder.svg')
+        # icon_folder = app_icon('icon_folder.svg')
+        icon_folder = app_icon('icon_folder.ico')
         root_dir_btn = QtWidgets.QPushButton(icon_folder, '', self)
         root_dir_btn.setIconSize(QtCore.QSize(24,24))
         root_dir_btn.clicked.connect(self.select_root_file)
@@ -120,7 +127,11 @@ class Window(QtWidgets.QMainWindow):
         self.le_filename_contains.currentTextChanged.connect(self.filename_contains_changed)
         filter_layout.addWidget(self.le_filename_contains, 0, 3)
 
-        for col, stch in [(0,0), (1,1), (2,0), (3,3)]:
+        self.check_case = QtWidgets.QCheckBox("Case sensitive", self)
+        self.check_case.setChecked(self.settings.filename_case_sensitive)
+        filter_layout.addWidget(self.check_case, 0, 4)
+
+        for col, stch in [(0,0), (1,1), (2,0), (3,3), (4,0)]:
             filter_layout.setColumnStretch(col, stch)
         filter_box.setLayout(filter_layout)
         main_layout.addWidget(filter_box)
@@ -128,11 +139,11 @@ class Window(QtWidgets.QMainWindow):
         # Execute box
         self.execute_grp = QtWidgets.QGroupBox("Execute search")
         self.execute_lyt = QtWidgets.QHBoxLayout()
-        search_btn = QtWidgets.QPushButton(app_icon('icon_folder_search.svg'),'Search')
+        search_btn = QtWidgets.QPushButton(app_icon('icon_search_folder2.ico'),'Search')
         search_btn.clicked.connect(self.search_files)
         self.execute_lyt.addWidget(search_btn)
 
-        self.report_btn = QtWidgets.QPushButton(app_icon('icon_report.svg'),
+        self.report_btn = QtWidgets.QPushButton(app_icon('icon_report.ico'),
                                                 'Copy report to clipboard')
         self.report_btn.clicked.connect(self.copy_report_to_clipboard)
         self.report_btn.setEnabled(False)
@@ -200,12 +211,14 @@ class Window(QtWidgets.QMainWindow):
             logging.info('%s not found', self.settings.root_directory)
             return
 
+        self.settings.filename_case_sensitive = self.check_case.isChecked()
         self.settings.save()
 
         self.file_selection.select_files(self.settings.root_directory,
                                          self.settings.filter_extension,
-                                         self.settings.filter_filename)
-        
+                                         self.settings.filter_filename,
+                                         self.settings.filename_case_sensitive)
+
         dlg = SearchProgress(self, self.file_selection)
         if dlg.exec()==QtWidgets.QDialog.Accepted:
             self.file_selection.selected_files = list(dlg.result())
@@ -257,7 +270,7 @@ class Window(QtWidgets.QMainWindow):
 
                 # Create new dir if needed
                 if str(parent) not in place_in_directory_tree.keys():
-                    subdirectory = QtGui.QStandardItem(app_icon('icon_folder.svg'), str(parent))
+                    subdirectory = QtGui.QStandardItem(app_icon('icon_folder.ico'), str(parent))
                     font = QtGui.QFont()
                     font.setBold(True)
                     subdirectory.setFont(font)

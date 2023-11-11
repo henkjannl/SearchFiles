@@ -2,14 +2,15 @@
 
 # Constants
 # Keywords in the settings file (json)
-SETTINGS_VERSION            = "Version"
-SETTINGS_ROOT_DIRECTORY     = "RootDir"
-SETTINGS_RECENT_DIRECTORIES = "RecentDirectories"
-SETTINGS_FILTER_EXTENSION   = "FilterExtension"
-SETTINGS_RECENT_EXTENSIONS  = "RecentExtensions"
-SETTINGS_FILTER_FILENAME    = "FilterFilename"
-SETTINGS_RECENT_FILENAMES   = "RecentFilenames"
-SETTINGS_REPORT_COLUMNS     = "ReportColumns"
+SETTINGS_VERSION                 = "Version"
+SETTINGS_ROOT_DIRECTORY          = "RootDir"
+SETTINGS_RECENT_DIRECTORIES      = "RecentDirectories"
+SETTINGS_FILTER_EXTENSION        = "FilterExtension"
+SETTINGS_RECENT_EXTENSIONS       = "RecentExtensions"
+SETTINGS_FILTER_FILENAME         = "FilterFilename"
+SETTINGS_FILENAME_CASE_SENSITIVE = "FilenameCaseSensitive"
+SETTINGS_RECENT_FILENAMES        = "RecentFilenames"
+SETTINGS_REPORT_COLUMNS          = "ReportColumns"
 
 # Column names in the report
 COL_PATH              = 'Path'

@@ -16,6 +16,7 @@ class Settings():
         self.recent_extensions = ['', 'docx', 'xlsx', 'pptx', 'pdf', 'odt', 'odt', 'csv', 
                                   'py', 'svg', 'FCStd', 'png', 'jpg', 'jpeg', 'gif', 'txt', 'zip']
         self.filter_filename = ''
+        self.filename_case_sensitive = False
         self.recent_filename_filters = []
 
         # Name of the column, followed by a boolean which tells whether it is shown
@@ -41,7 +42,6 @@ class Settings():
 
         # Do not limit the recent extension list
 
-
         # Ensure we have a dictionary
         logging.info("Checking self.report_columns")
 
@@ -54,10 +54,8 @@ class Settings():
 
         # Ensure all fields of the export are present
         for key, item in const.DEFAULT_COLUMNS:
-            logging.info("Checking %s", key)
             if key not in [field for field, selected in self.report_columns]:
                 self.report_columns.append( [key, item])
-                logging.info("   - Adding %s", key)
 
         # Maintain the list of recent filenames
         if self.filter_filename not in self.recent_filename_filters:
@@ -74,22 +72,25 @@ class Settings():
                 settings_dict = json.load(openfile)
 
         if const.SETTINGS_VERSION in settings_dict.keys():
-            self.settings_version        = settings_dict[const.SETTINGS_VERSION]
+            self.settings_version = settings_dict[const.SETTINGS_VERSION]
 
         if const.SETTINGS_ROOT_DIRECTORY in settings_dict.keys():
-            self.root_directory          = settings_dict[const.SETTINGS_ROOT_DIRECTORY]
+            self.root_directory = settings_dict[const.SETTINGS_ROOT_DIRECTORY]
 
         if const.SETTINGS_RECENT_DIRECTORIES in settings_dict.keys():
-            self.recent_directories      = settings_dict[const.SETTINGS_RECENT_DIRECTORIES]
+            self.recent_directories = settings_dict[const.SETTINGS_RECENT_DIRECTORIES]
 
         if const.SETTINGS_FILTER_EXTENSION in settings_dict.keys():
-            self.filter_extension        = settings_dict[const.SETTINGS_FILTER_EXTENSION]
+            self.filter_extension = settings_dict[const.SETTINGS_FILTER_EXTENSION]
 
         if const.SETTINGS_RECENT_EXTENSIONS in settings_dict.keys():
-            self.recent_extensions       = settings_dict[const.SETTINGS_RECENT_EXTENSIONS]
+            self.recent_extensions = settings_dict[const.SETTINGS_RECENT_EXTENSIONS]
 
         if const.SETTINGS_FILTER_FILENAME in settings_dict.keys():
-            self.filter_filename         = settings_dict[const.SETTINGS_FILTER_FILENAME]
+            self.filter_filename = settings_dict[const.SETTINGS_FILTER_FILENAME]
+
+        if const.SETTINGS_FILENAME_CASE_SENSITIVE in settings_dict.keys():
+            self.filename_case_sensitive = settings_dict[const.SETTINGS_FILENAME_CASE_SENSITIVE]
 
         if const.SETTINGS_RECENT_FILENAMES in settings_dict.keys():
             self.recent_filename_filters = settings_dict[const.SETTINGS_RECENT_FILENAMES]
@@ -106,14 +107,15 @@ class Settings():
         self.cleanup()
 
         settings_dict = {}
-        settings_dict[const.SETTINGS_VERSION]            = self.settings_version
-        settings_dict[const.SETTINGS_ROOT_DIRECTORY]     = self.root_directory
-        settings_dict[const.SETTINGS_RECENT_DIRECTORIES] = self.recent_directories
-        settings_dict[const.SETTINGS_FILTER_EXTENSION]   = self.filter_extension
-        settings_dict[const.SETTINGS_RECENT_EXTENSIONS]  = self.recent_extensions
-        settings_dict[const.SETTINGS_FILTER_FILENAME]    = self.filter_filename
-        settings_dict[const.SETTINGS_RECENT_FILENAMES]   = self.recent_filename_filters
-        settings_dict[const.SETTINGS_REPORT_COLUMNS]     = self.report_columns
+        settings_dict[const.SETTINGS_VERSION]                 = self.settings_version
+        settings_dict[const.SETTINGS_ROOT_DIRECTORY]          = self.root_directory
+        settings_dict[const.SETTINGS_RECENT_DIRECTORIES]      = self.recent_directories
+        settings_dict[const.SETTINGS_FILTER_EXTENSION]        = self.filter_extension
+        settings_dict[const.SETTINGS_RECENT_EXTENSIONS]       = self.recent_extensions
+        settings_dict[const.SETTINGS_FILTER_FILENAME]         = self.filter_filename
+        settings_dict[const.SETTINGS_FILENAME_CASE_SENSITIVE] = self.filename_case_sensitive
+        settings_dict[const.SETTINGS_RECENT_FILENAMES]        = self.recent_filename_filters
+        settings_dict[const.SETTINGS_REPORT_COLUMNS]          = self.report_columns
 
         json_settings_object = json.dumps(settings_dict, indent=4)
         with open(self.settings_file, "w") as outfile:

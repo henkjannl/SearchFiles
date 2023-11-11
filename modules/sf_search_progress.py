@@ -26,6 +26,7 @@ class SearchProgress(QtWidgets.QDialog):
         self.new_search.root_directory = search_assignment.root_directory
         self.new_search.filter_filename = search_assignment.filter_filename
         self.new_search.filter_extension = search_assignment.filter_extension
+        self.new_search.filename_case_sensitive = search_assignment.filename_case_sensitive
 
         # Create a vertical layout with status
         main_layout = QtWidgets.QVBoxLayout()
