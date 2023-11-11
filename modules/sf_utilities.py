@@ -16,19 +16,7 @@ def app_dir(file):
 def app_icon(file):
     """"Return an icon in the .app dir"""
     icon_file = str(Path( Path(__file__).parent.parent, '.icons', file ))
-    if Path(icon_file).is_file:
-        found='yes'
-    else:
-        found= 'no'
-
-    result = QtGui.QIcon( icon_file )
-
-    isnull = 'no'
-    if result.isNull():
-        isnull = 'empty icon'
-
-    logging.info('File %s found: %s isnull: %s', icon_file, found, isnull)
-    return result
+    return QtGui.QIcon( icon_file )
 
 def image_taken_date(file):
     """Attempts to retrieve original date and time from a photo

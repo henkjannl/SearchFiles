@@ -8,8 +8,6 @@
     ],
     "FilterExtension": "",
     "RecentExtensions": [
-        "s",
-        "sv",
         "",
         "docx",
         "xlsx",
@@ -28,16 +26,10 @@
         "txt",
         "zip"
     ],
-    "FilterFilename": "Kumovis",
+    "FilterFilename": "",
+    "FilenameCaseSensitive": false,
     "RecentFilenames": [
         "Kumovis",
-        "kumovis",
-        "kumovi",
-        "kumov",
-        "kumo",
-        "kum",
-        "ku",
-        "k",
         ""
     ],
     "ReportColumns": [

@@ -33,7 +33,7 @@
         "txt",
         "zip"
     ],
-    "FilterFilename": "",
+    "FilterFilename": "femoral",
     "FilenameCaseSensitive": true,
     "RecentFilenames": [
         "femoral",
@@ -92,7 +92,7 @@
         ],
         [
             "Path depth",
-            true
+            false
         ]
     ]
 }

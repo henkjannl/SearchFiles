@@ -5,8 +5,7 @@
 - copies data to clipboard
 
 To do:
-- resolve why icons don't work on Lenovo computer
-- add 'case sensitive' flag to filename option
+- refactor code. lots of copying of settings now
 - add status bar with relevant info
 - search tree:
     - collapse / expand all with right mouse button
@@ -52,8 +51,6 @@ class Window(QtWidgets.QMainWindow):
     def __init__(self, parent=None, filename_settings = "settings.json"):
         super().__init__(parent)
 
-        logging.info("App dir %s", app_dir("file.txt") )
-
         self.root_directory = Path().home()
 
         # Create window
@@ -63,9 +60,8 @@ class Window(QtWidgets.QMainWindow):
         
         self.resize(1200, 800)
 
-        # Settings
+        # Specify settings file and load settings 
         self.settings = Settings(filename_settings)
-        self.settings.load()
 
         # Object containing selected files
         self.file_selection = FileSelection()
@@ -181,13 +177,10 @@ class Window(QtWidgets.QMainWindow):
         self.root_dir_combo.addItem(self.settings.root_directory)
         self.root_dir_combo.setCurrentIndex (self.root_dir_combo.count()-1)
 
-        self.settings.save()
-
     def root_directory_index_changed(self):
         """Event triggered when index of root file is changed"""
         self.settings.root_directory = self.root_dir_combo.currentText()
-        self.settings.save()
-
+       
     def root_directory_text_changed(self, new_text):
         """Event triggered when text of the root file is changed"""
         self.settings.root_directory = new_text
@@ -197,12 +190,10 @@ class Window(QtWidgets.QMainWindow):
     def filter_extension_changed(self, new_text):
         """Event triggered when file extension is changed"""
         self.settings.filter_extension = new_text
-        self.settings.save()
 
     def filename_contains_changed(self, new_text):
         """Event triggered when filename contains field is changed"""
         self.settings.filter_filename = new_text
-        self.settings.save()
 
     def search_files(self):
         """Search files and directories"""

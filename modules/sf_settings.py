@@ -42,16 +42,6 @@ class Settings():
 
         # Do not limit the recent extension list
 
-        # Ensure we have a dictionary
-        logging.info("Checking self.report_columns")
-
-        if type(self.report_columns) != type(const.DEFAULT_COLUMNS):
-            logging.info("Overwriting self.report_columns since it is not a dict")
-            logging.info("Type is now: %s", str(type(self.report_columns)))
-            self.report_columns = const.DEFAULT_COLUMNS
-        
-        logging.info(self.report_columns)
-
         # Ensure all fields of the export are present
         for key, item in const.DEFAULT_COLUMNS:
             if key not in [field for field, selected in self.report_columns]:
