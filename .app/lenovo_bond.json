@@ -1,12 +1,17 @@
 {
     "Version": 1,
-    "RootDir": "C:\\Users\\hj.vanderpol\\Nextcloud-Bond3D\\Patents",
+    "RootDir": "C:\\Users\\hj.vanderpol\\Nextcloud-Bond3D\\Development",
     "RecentDirectories": [
+        "C:\\Users\\hj.vanderpol\\Nextcloud-Bond3D\\Pictures\\Patents\\Porosity on curved surfaces",
+        "C:\\Users\\hj.vanderpol\\Nextcloud-Bond3D",
+        "C:\\Users\\hj.vanderpol\\Nextcloud-Bond3D\\Collaborations",
+        "C:\\Users\\hj.vanderpol\\Nextcloud-Bond3D\\Development",
+        "C:\\Users\\hj.vanderpol\\Nextcloud-Bond3D\\Presentations",
         "C:\\Users\\hj.vanderpol\\Nextcloud-Bond3D\\Patents",
         "C:\\Users\\hj.vanderpol\\Nextcloud-Bond3D\\Pictures",
         "C:\\Users\\hj.vanderpol\\Downloads"
     ],
-    "FilterExtension": "",
+    "FilterExtension": "docx",
     "RecentExtensions": [
         "",
         "docx",
@@ -29,6 +34,12 @@
     "FilterFilename": "",
     "FilenameCaseSensitive": false,
     "RecentFilenames": [
+        "nozzle",
+        "crystal",
+        "speed of crystallization",
+        "benchy",
+        "EP1204517B1",
+        "stratasys",
         "Kumovis",
         ""
     ],
@@ -39,6 +50,10 @@
         ],
         [
             "Filename",
+            true
+        ],
+        [
+            "Path and filename",
             true
         ],
         [
@@ -55,7 +70,7 @@
         ],
         [
             "Create date",
-            false
+            true
         ],
         [
             "Modified date",
@@ -75,10 +90,6 @@
         ],
         [
             "Image height",
-            false
-        ],
-        [
-            "Path and filename",
             false
         ]
     ]

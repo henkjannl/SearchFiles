@@ -4,10 +4,17 @@
 [sf_search_progress.py 061] Dialog initialized, creating thread
 [sf_search_progress.py 074] Thread should be started
 [sf_file_selection.py 139] Starting search
-[sf_file_selection.py 148] 5350 files found
+[sf_file_selection.py 148] 120 files found
 [sf_search_progress.py 078] Search completed
 [SearchFiles.py 240] update_treeview called
 [SearchFiles.py 225] clear_treeview called
 [SearchFiles.py 253] Creating directories
 [SearchFiles.py 275] Adding files to directories
 [SearchFiles.py 221] End of search_files function
+[SearchFiles.py 295] create_report called
+[sf_report_columns.py 070] Accepted
+[sf_report_columns.py 073] [['Path', True], ['Filename', True], ['Path and filename', True], ['File size', False], ['Extension', False], ['Path depth', False], ['Create date', True], ['Modified date', False], ['Accessed date', False], ['Image taken date', False], ['Image width', False], ['Image height', False]]
+[SearchFiles.py 299] [['Path', True], ['Filename', True], ['Path and filename', True], ['File size', False], ['Extension', False], ['Path depth', False], ['Create date', True], ['Modified date', False], ['Accessed date', False], ['Image taken date', False], ['Image width', False], ['Image height', False]]
+[sf_file_selection.py 199] copy_report_to_clipboard:
+[sf_file_selection.py 200] [['Path', True], ['Filename', True], ['Path and filename', True], ['File size', False], ['Extension', False], ['Path depth', False], ['Create date', True], ['Modified date', False], ['Accessed date', False], ['Image taken date', False], ['Image width', False], ['Image height', False]]
+[sf_settings.py 095] save_settings called for C:\Users\hj.vanderpol\Documents\GitHub\SearchFiles\.app\lenovo_bond.json
