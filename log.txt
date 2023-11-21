@@ -1,17 +1,10 @@
-[sf_settings.py 058] load_settings called for c:\Users\hj.vanderpol\Documents\GitHub\SearchFiles\.app\settings.json
+[sf_settings.py 058] load_settings called for C:\Users\hj.vanderpol\Documents\GitHub\SearchFiles\.app\lenovo_bond.json
 [SearchFiles.py 225] clear_treeview called
-[sf_settings.py 095] save_settings called for c:\Users\hj.vanderpol\Documents\GitHub\SearchFiles\.app\settings.json
+[sf_settings.py 095] save_settings called for C:\Users\hj.vanderpol\Documents\GitHub\SearchFiles\.app\lenovo_bond.json
 [sf_search_progress.py 061] Dialog initialized, creating thread
 [sf_search_progress.py 074] Thread should be started
 [sf_file_selection.py 139] Starting search
-[sf_file_selection.py 198] Error looping through C:\Users\hj.vanderpol\Nextcloud-Bond3D\Readonly\08 Stage- en afstudeerverslagen\20180601 Saxion project staafjes\Documentatie Flexpro 3S Cutting and Deburring\03. TDD technisch ontwerp\Drawings\Designed\3DCAD\Cleaning (airknife)\Air knife design\Behuizing\DXF
-[sf_file_selection.py 198] Error looping through C:\Users\hj.vanderpol\Nextcloud-Bond3D\Readonly\08 Stage- en afstudeerverslagen\20180601 Saxion project staafjes\Documentatie Flexpro 3S Cutting and Deburring\03. TDD technisch ontwerp\Drawings\Designed\3DCAD\Cleaning (airknife)\Air knife design\Ramp\DXF\new
-[sf_file_selection.py 198] Error looping through C:\Users\hj.vanderpol\Nextcloud-Bond3D\Readonly\08 Stage- en afstudeerverslagen\20180601 Saxion project staafjes\Documentatie Flexpro 3S Cutting and Deburring\03. TDD technisch ontwerp\Drawings\Designed\3DCAD\Cleaning (airknife)\Archief\Air knife design\Ramp
-[sf_file_selection.py 198] Error looping through C:\Users\hj.vanderpol\Nextcloud-Bond3D\Readonly\08 Stage- en afstudeerverslagen\20180601 Saxion project staafjes\Documentatie Flexpro 3S Cutting and Deburring\03. TDD technisch ontwerp\Drawings\Designed\3DCAD\Cleaning (airknife)\Archief\Air knife design\Rev 2
-[sf_file_selection.py 198] Error looping through C:\Users\hj.vanderpol\Nextcloud-Bond3D\Readonly\08 Stage- en afstudeerverslagen\20180601 Saxion project staafjes\Documentatie Flexpro 3S Cutting and Deburring\03. TDD technisch ontwerp\Drawings\Designed\3DCAD\Cleaning (airknife)\Drawings\DXF FINAL LASERFILES
-[sf_file_selection.py 198] Error looping through C:\Users\hj.vanderpol\Nextcloud-Bond3D\Readonly\08 Stage- en afstudeerverslagen\20180601 Saxion project staafjes\Documentatie Flexpro 3S Cutting and Deburring\03. TDD technisch ontwerp\Drawings\Designed\3DCAD\Compleet systeem\Bevestigingsmateriaal\Scharnier
-[sf_file_selection.py 198] Error looping through C:\Users\hj.vanderpol\Nextcloud-Bond3D\Readonly\08 Stage- en afstudeerverslagen\20180601 Saxion project staafjes\Documentatie Flexpro 3S Cutting and Deburring\03. TDD technisch ontwerp\Drawings\Designed\3DCAD\Compleet systeem\Pneumatiek\Pneumatische cilinder
-[sf_file_selection.py 148] 1845 files found
+[sf_file_selection.py 148] 200 files found
 [sf_search_progress.py 078] Search completed
 [SearchFiles.py 240] update_treeview called
 [SearchFiles.py 225] clear_treeview called

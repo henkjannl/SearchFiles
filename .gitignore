@@ -167,3 +167,5 @@ cython_debug/
 .app/lenovo_bond.json
 .app/settings.json
 log.txt
+.app/lenovo_bond.json
+log.txt
