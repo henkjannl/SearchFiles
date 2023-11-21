@@ -175,24 +175,27 @@ class FileSelection(QtCore.QObject):
         return True
 
     def __add_to_selection__(self, path):
-        """Recursive function that scans the disk and add relevant files to the selection"""        
-        for entry in path.iterdir():
+        """Recursive function that scans the disk and add relevant files to the selection"""    
+        try:
+            for entry in path.iterdir():
 
-            # Allow the user to interrupt the search
-            if not self.continue_execution:
-                return
+                # Allow the user to interrupt the search
+                if not self.continue_execution:
+                    return
 
-            if self.requirement(entry):
-                # Add new member to the selected_files list
-                selected_file = SelectedFile(self.unique_identifier, self.root_directory, entry)
-                self.selected_files.append(selected_file)
-                self.unique_identifier+=1
-                if self.unique_identifier % 100 == 0:
-                    self.progress.emit( len(self.selected_files) )
+                if self.requirement(entry):
+                    # Add new member to the selected_files list
+                    selected_file = SelectedFile(self.unique_identifier, self.root_directory, entry)
+                    self.selected_files.append(selected_file)
+                    self.unique_identifier+=1
+                    if self.unique_identifier % 100 == 0:
+                        self.progress.emit( len(self.selected_files) )
 
-            if entry.is_dir():
-                # Recursively search subdirectories
-                self.__add_to_selection__(entry)
+                if entry.is_dir():
+                    # Recursively search subdirectories
+                    self.__add_to_selection__(entry)
+        except:
+            logging.info("Error looping through %s", str(path))
 
     def copy_report_to_clipboard(self, report_columns):
         """Create a list with only the selected columns in the report"""
